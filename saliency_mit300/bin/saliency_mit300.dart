@@ -51,16 +51,6 @@ bool _isModel(String name, ModelResults modelResults) {
   return _sanitizeString(modelResults.modelName).contains(sanitizedString);
 }
 
-bool _isAmongModels(List<String> names, ModelResults modelResults) {
-  for (var name in names) {
-    if (_isModel(name, modelResults)) {
-      return true;
-    }
-  }
-
-  return false;
-}
-
 class _ModelNameQuery {
   final String query;
   final String displayName;

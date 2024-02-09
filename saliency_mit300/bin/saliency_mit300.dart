@@ -94,8 +94,8 @@ String _generateLaTeXLineForModelNameQuery(
       '${modelResultsForQuery.cc} & ${modelResultsForQuery.nss} & ${modelResultsForQuery.kl} \\\\';
 }
 
-Future<void> _printMit300JsonContent() async {
-  final mit300Json = await _readJsonFile('./data/cat2000_results.json');
+Future<void> _printLatexLinesForDataset(String dataset) async {
+  final mit300Json = await _readJsonFile('./data/${dataset}_results.json');
 
   final tbody = mit300Json['tbody'];
   final tr = tbody['tr'];
@@ -125,5 +125,7 @@ Future<void> _printMit300JsonContent() async {
 }
 
 void main(List<String> arguments) {
-  _printMit300JsonContent();
+  final dataset = arguments.first;
+
+  _printLatexLinesForDataset(dataset);
 }

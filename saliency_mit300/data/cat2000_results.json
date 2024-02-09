@@ -1,0 +1,1758 @@
+{
+  "tbody": {
+    "#comment": "",
+    "tr": [
+      {
+        "@bgcolor": "#DDDDDD",
+        "td": [
+          {
+            "a": {
+              "@href": "javascript:void(0);",
+              "@onclick": "return popitup('baselineExp/infinite.html')",
+              "#text": "[?]"
+            },
+            "#text": "Baseline: infinite humans"
+          },
+          "",
+          "",
+          "0.90",
+          "1",
+          "0",
+          "0.84",
+          "0.62",
+          "1",
+          "2.85",
+          "0",
+          {
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_infObservers.csv",
+              "#text": "Complete results"
+            }
+          },
+          {
+            "img": {
+              "@src": "sampleImage_CAT2000/002.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          "Saliency Attentive Model (SAM-ResNet)",
+          {
+            "a": {
+              "@href": "https://ieeexplore.ieee.org/document/8400593/",
+              "#text": "Predicting Human Eye Fixations via an LSTM-based Saliency Attentive Model [IEEE TIP 2018]"
+            },
+            "#text": "Marcella Cornia, Lorenzo Baraldi, Giuseppe Serra, Rita Cucchiara."
+          },
+          {
+            "a": {
+              "@href": " https://github.com/marcellacornia/sam",
+              "#text": "python"
+            }
+          },
+          "0.88",
+          "0.77",
+          "1.04",
+          "0.80",
+          "0.58",
+          "0.89",
+          "2.38",
+          "0.56",
+          {
+            "br": [
+              "",
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_sam-resnet.csv",
+              "#text": "Complete results"
+            },
+            "#text": [
+              "first tested: 30/10/2016",
+              "last tested: 03/03/2017"
+            ]
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/sam-resnet.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          "Saliency Attentive Model (SAM-VGG)",
+          {
+            "a": {
+              "@href": "https://ieeexplore.ieee.org/document/8400593/",
+              "#text": "Predicting Human Eye Fixations via an LSTM-based Saliency Attentive Model [IEEE TIP 2018]"
+            },
+            "#text": "Marcella Cornia, Lorenzo Baraldi, Giuseppe Serra, Rita Cucchiara."
+          },
+          {
+            "a": {
+              "@href": " https://github.com/marcellacornia/sam",
+              "#text": "python"
+            }
+          },
+          "0.88",
+          "0.76",
+          "1.07",
+          "0.79",
+          "0.58",
+          "0.89",
+          "2.38",
+          "0.54",
+          {
+            "br": [
+              "",
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_sam-vgg.csv",
+              "#text": "Complete results"
+            },
+            "#text": [
+              "first tested: 30/10/2016",
+              "last tested: 03/03/2017"
+            ]
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/sam-vgg.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          "CEDNS",
+          "Chunhuan Lin, Fei Qi, Guangming Shi, Hao Li",
+          "",
+          "0.88",
+          "0.73",
+          "1.27",
+          "0.74",
+          "0.58",
+          "0.85",
+          "2.39",
+          "0.34",
+          {
+            "br": [
+              "",
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_CEDNS-cat2000.csv",
+              "#text": "Complete results"
+            },
+            "#text": [
+              "first tested: 24/06/2018",
+              "last tested: 24/06/2018"
+            ]
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/CEDNS-cat2000.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          "MSI-Net",
+          {
+            "a": {
+              "@href": "https://arxiv.org/abs/1902.06634",
+              "#text": "Contextual Encoder-Decoder Network for Visual Saliency Prediction [arXiv 2019]"
+            },
+            "#text": "Alexander Kroner, Mario Senden, Kurt Driessens, Rainer Goebel."
+          },
+          {
+            "a": {
+              "@href": "https://github.com/alexanderkroner/saliency",
+              "#text": "Python"
+            }
+          },
+          "0.88",
+          "0.75",
+          "1.07",
+          "0.82",
+          "0.59",
+          "0.87",
+          "2.30",
+          "0.36",
+          {
+            "br": [
+              "",
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_KronerModelAblation4CAT2000.csv",
+              "#text": "Complete results"
+            },
+            "#text": [
+              "first tested: 06/12/2018",
+              "last tested: 06/12/2018"
+            ]
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/KronerModelAblation4CAT2000.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "http://arxiv.org/abs/1510.02927",
+              "#text": "DeepFix"
+            }
+          },
+          {
+            "a": {
+              "@href": "http://arxiv.org/abs/1510.02927",
+              "#text": "DeepFix: A Fully Convolutional Neural Network for predicting Human Eye Fixations [arXiv 2015]"
+            },
+            "#text": "Srinivas S S Kruthiventi, Kumar Ayush, R. Venkatesh Babu."
+          },
+          "",
+          "0.87",
+          "0.74",
+          "1.15",
+          "0.81",
+          "0.58",
+          "0.87",
+          "2.28",
+          "0.37",
+          {
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "br": "",
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_DeepFix.csv",
+              "#text": "Complete results"
+            },
+            "#text": "last tested: 02/10/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/srinivas.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          "EML-NET",
+          {
+            "a": {
+              "@href": "https://arxiv.org/abs/1805.01047",
+              "#text": "EML-NET: An Expandable Multi-Layer NETwork for Saliency Prediction [arXiv 2018]"
+            },
+            "#text": "Sen Jia."
+          },
+          "",
+          "0.87",
+          "0.75",
+          "1.05",
+          "0.79",
+          "0.59",
+          "0.88",
+          "2.38",
+          "0.96",
+          {
+            "br": [
+              "",
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_EMSNET.csv",
+              "#text": "Complete results"
+            },
+            "#text": [
+              "first tested: 20/03/2018",
+              "last tested: 20/03/2018"
+            ]
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/EMSNET.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          "MixNet",
+          "[anonymous]",
+          "",
+          "0.86",
+          "0.66",
+          "1.63",
+          "0.82",
+          "0.58",
+          "0.76",
+          "1.92",
+          "0.62",
+          {
+            "br": [
+              "",
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_MixNet.csv",
+              "#text": "Complete results"
+            },
+            "#text": [
+              "first tested: 30/10/2016",
+              "last tested: 30/10/2016"
+            ]
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/MixNet.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "http://coxlab.org/saliency/",
+              "#text": "Ensembles of Deep Networks (eDN)"
+            }
+          },
+          {
+            "a": {
+              "@href": "http://coxlab.org/pdfs/cvpr2014_vig_saliency.pdf",
+              "#text": "Large-Scale Optimization of Hierarchical Features for Saliency Prediction in Natural Images [CVPR 2014]"
+            },
+            "#text": "Eleonora Vig, Michael Dorr, David Cox."
+          },
+          {
+            "a": {
+              "@href": "https://github.com/coxlab/edn-cvpr2014",
+              "#text": "python"
+            }
+          },
+          "0.85",
+          "0.52",
+          "2.64",
+          "0.84",
+          "0.55",
+          "0.54",
+          "1.30",
+          "0.97",
+          {
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "br": "",
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_eDN.csv",
+              "#text": "Complete results"
+            },
+            "#text": "last tested: 01/10/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/eDN.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "http://cs-people.bu.edu/jmzhang/BMS/BMS.html",
+              "#text": "Boolean Map based Saliency (BMS)"
+            }
+          },
+          {
+            "a": {
+              "@href": "http://cs-people.bu.edu/jmzhang/BMS/BMS_iccv13_preprint.pdf",
+              "#text": "Saliency detection: a boolean map approach [ICCV 2013, PAMI 2015]"
+            },
+            "#text": "Jianming Zhang, Stan Sclaroff."
+          },
+          {
+            "a": [
+              {
+                "@href": "http://cs-people.bu.edu/jmzhang/BMS/down_bms_mex.php?Down=BMS-mex.zip",
+                "#text": "matlab"
+              },
+              {
+                "@href": "http://cs-people.bu.edu/jmzhang/BMS/down_bms.php?Down=BMS.zip",
+                "#text": "executable"
+              }
+            ],
+            "#text": ","
+          },
+          "0.85",
+          "0.61",
+          "1.95",
+          "0.84",
+          "0.59",
+          "0.67",
+          "1.67",
+          "0.83",
+          {
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "br": "",
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_BMS.csv",
+              "#text": "Complete results"
+            },
+            "#text": "tested: 05/10/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/BMS_PostProc.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          "SeeGAN",
+          "William Edward Hahn, Elan Barenholtz, Mark Lensonâ€‹",
+          "",
+          "0.85",
+          "0.68",
+          "1.45",
+          "0.78",
+          "0.56",
+          "0.81",
+          "2.11",
+          "1.27",
+          {
+            "br": [
+              "",
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_DeepVisionMap2.csv",
+              "#text": "Complete results"
+            },
+            "#text": [
+              "first tested: 02/22/2018",
+              "last tested: 02/22/2018"
+            ]
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/DeepVisionMap2.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "http://people.csail.mit.edu/tjudd/WherePeopleLook/index.html",
+              "#text": "Judd Model"
+            }
+          },
+          {
+            "a": {
+              "@href": "http://people.csail.mit.edu/tjudd/WherePeopleLook/Docs/wherepeoplelook.pdf",
+              "#text": "Learning to predict where humans look [ICCV 2009]"
+            },
+            "#text": "Tilke Judd, Krista Ehinger, Fredo Durand, Antonio Torralba."
+          },
+          {
+            "a": {
+              "@href": "http://people.csail.mit.edu/tjudd/WherePeopleLook/Code/JuddSaliencyModel.zip",
+              "#text": "matlab"
+            }
+          },
+          "0.84",
+          "0.46",
+          "3.60",
+          "0.84",
+          "0.56",
+          "0.54",
+          "1.30",
+          "0.94",
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from code (DL:17/12/2013) with default params"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_Judd.csv",
+              "#text": "Complete results"
+            },
+            "#text": "last tested: 26/01/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/Judd.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          "iSEEL",
+          {
+            "a": {
+              "@href": "http://arxiv.org/abs/1610.06449",
+              "#text": "Exploiting inter-image similarity and ensemble of extreme learners for fixation prediction using deep features [arXiv 2016]"
+            },
+            "#text": "Hamed R.-Tavakoli et al."
+          },
+          {
+            "a": {
+              "@href": "http://github.com/hrtavakoli/iseel",
+              "#text": "Matlab"
+            }
+          },
+          "0.84",
+          "0.62",
+          "1.78",
+          "0.81",
+          "0.59",
+          "0.66",
+          "1.67",
+          "0.92",
+          {
+            "br": [
+              "",
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_iSEEL.csv",
+              "#text": "Complete results"
+            },
+            "#text": [
+              "first tested: 11/10/2016",
+              "last tested: 11/10/2016"
+            ]
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/iSEELDeepFeatModel.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          "Saliency Map Synthesized by Pseudo-inverse Matrix",
+          "Nobuhide Matsuo, Shunji Satoh",
+          "",
+          "0.84",
+          "0.64",
+          "1.72",
+          "0.80",
+          "0.54",
+          "0.76",
+          "1.93",
+          "0.85",
+          {
+            "br": [
+              "",
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_CrossPixelsSaliency.csv",
+              "#text": "Complete results"
+            },
+            "#text": [
+              "first tested: 20/03/2018",
+              "last tested: 20/03/2018"
+            ]
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/CrossPixelsSaliency.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "@bgcolor": "#DDDDDD",
+        "td": [
+          {
+            "a": {
+              "@href": "javascript:void(0);",
+              "@onclick": "return popitup('baselineExp/center.html')",
+              "#text": "[?]"
+            },
+            "#text": "Baseline: Center"
+          },
+          "",
+          {
+            "a": {
+              "@href": "http://saliency.mit.edu/Code/centerModel.zip",
+              "#text": "matlab"
+            }
+          },
+          "0.83",
+          "0.42",
+          "4.31",
+          "0.81",
+          "0.50",
+          "0.46",
+          "1.06",
+          "1.13",
+          {
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_Center.csv",
+              "#text": "Complete results"
+            }
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/Center.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          "LDS",
+          {
+            "a": {
+              "@href": "http://ieeexplore.ieee.org/document/7407672/",
+              "#text": "Learning Discriminative Subspaces on Random Contrasts for Image Saliency Analysis"
+            },
+            "#text": [
+              "Shu Fang, Jia Li, Yonghong Tian, Tiejun Huang, Xiaowu Chen.",
+              "[TNNLS 2016]"
+            ]
+          },
+          {
+            "a": {
+              "@href": "http://pkuml.org/resources/code.html",
+              "#text": "Matlab"
+            }
+          },
+          "0.83",
+          "0.58",
+          "2.09",
+          "0.79",
+          "0.56",
+          "0.62",
+          "1.54",
+          "0.79",
+          {
+            "br": [
+              "",
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_LDS_CAT2000.csv",
+              "#text": "Complete results"
+            },
+            "#text": [
+              "first tested: 28/09/2016",
+              "last tested: 28/09/2016"
+            ]
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/LDS.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          "Eye Movement Laws (EYMOL)",
+          {
+            "a": {
+              "@href": "https://papers.nips.cc/paper/6972-variational-laws-of-visual-attention-for-dynamic-scenes",
+              "#text": "Variational Laws of Visual Attention for Dynamic Scenes. [NIPS 2017]"
+            },
+            "#text": "Dario Zanca, Marco Gori."
+          },
+          {
+            "a": {
+              "@href": "https://github.com/dariozanca/eymol",
+              "#text": "python"
+            }
+          },
+          "0.83",
+          "0.61",
+          "1.91",
+          "0.76",
+          "0.51",
+          "0.72",
+          "1.78",
+          "1.67",
+          {
+            "br": [
+              "",
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_EYMOL2.csv",
+              "#text": "Complete results"
+            },
+            "#text": [
+              "first tested: 23/02/2017",
+              "last tested: 03/03/2017"
+            ]
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/EYMOL2.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "https://feng-gui.com/science",
+              "#text": "FENG-GUI (FG)"
+            }
+          },
+          "Rafael Mizrahi",
+          {
+            "a": {
+              "@href": "https://feng-gui.com/",
+              "#text": "demo"
+            }
+          },
+          "0.83",
+          "0.43",
+          "4.18",
+          "0.81",
+          "0.56",
+          "0.49",
+          "1.20",
+          "1.07",
+          {
+            "br": [
+              "",
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_FENG-GUI-june24.csv",
+              "#text": "Complete results"
+            },
+            "#text": [
+              "first tested: 19/04/2018",
+              "last tested: 24/06/2018"
+            ]
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/FENG-GUI-june24.jpg "
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "http://www.tcts.fpms.ac.be/attention/?categorie16/what-and-why",
+              "#text": "RARE2012- Improved"
+            }
+          },
+          {
+            "a": {
+              "@href": "http://www.sciencedirect.com/science/article/pii/S0923596513000489",
+              "#text": "LSUN SALICON Challenge (http://lsun.cs.princeton.edu/leaderboard/#saliencysalicon)"
+            },
+            "#text": "Pierre Marighetto, Nicolas Riche, Matei Mancas."
+          },
+          {
+            "a": {
+              "@href": "http://www.tcts.fpms.ac.be/attention/?categorie17/rare2012",
+              "#text": "Improved from: Matlab"
+            }
+          },
+          "0.82",
+          "0.54",
+          "2.72",
+          "0.81",
+          "0.59",
+          "0.57",
+          "1.44",
+          "0.76",
+          {
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "br": "",
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_Rare.csv",
+              "#text": "Complete results"
+            },
+            "#text": "tested: 05/10/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/rare.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "https://github.com/hrtavakoli/FES.git",
+              "#text": "Fast and Efficient Saliency (FES)"
+            }
+          },
+          {
+            "a": {
+              "@href": "http://link.springer.com/content/pdf/10.1007/978-3-642-21227-7_62",
+              "#text": "Fast and efficient saliency detection using sparse sampling and kernel density estimation [SCIA 2011]"
+            },
+            "#text": "Hamed Rezazadegan Tavakoli, Esa Rahtu, Janne Heikkila."
+          },
+          {
+            "a": {
+              "@href": "https://github.com/hrtavakoli/FES.git",
+              "#text": "matlab"
+            }
+          },
+          "0.82",
+          "0.57",
+          "2.24",
+          "0.76",
+          "0.54",
+          "0.64",
+          "1.61",
+          "2.10",
+          {
+            "br": [
+              "",
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_FES.csv",
+              "#text": "Complete results"
+            },
+            "#text": "last tested: 18/10/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/tavakoli.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          "Aboudib Magnification Saliency (Bottom-up v2)",
+          "Ala Aboudib, Vincent Gripon, Gilles Coppin. Unpublished work.",
+          {
+            "a": {
+              "@href": "https://bitbucket.org/ala_aboudib/see",
+              "#text": "python"
+            }
+          },
+          "0.81",
+          "0.58",
+          "2.10",
+          "0.77",
+          "0.55",
+          "0.64",
+          "1.57",
+          "1.41",
+          {
+            "br": [
+              "",
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_Aboudib_v2.csv",
+              "#text": "Complete results"
+            },
+            "#text": [
+              "first tested: 22/04/2015",
+              "last tested: 22/04/2015"
+            ]
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/AlaAboudib_v2.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          "SDDPM",
+          {
+            "a": {
+              "@href": "http://digital-library.theiet.org/content/journals/10.1049/iet-ipr.2017.0267",
+              "#text": "Efficient Bayesian approach to saliency detection based on Dirichlet process mixture [IET IP 2017]"
+            },
+            "#text": "Navid Rabbani, Behzad Nazari, Saeid Sadri, Reyhaneh Rikhtehgaran."
+          },
+          "",
+          "0.81",
+          "0.52",
+          "2.31",
+          "0.80",
+          "0.54",
+          "0.51",
+          "1.22",
+          "1.44",
+          {
+            "br": [
+              "",
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from authors"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_SDDPM.csv",
+              "#text": "Complete results"
+            },
+            "#text": [
+              "first tested: 20/01/2016",
+              "last tested: 20/01/2016"
+            ]
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/NavidRabbani.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "http://www.vision.caltech.edu/~harel/share/gbvs.php",
+              "#text": "Graph-Based Visual Saliency (GBVS)"
+            }
+          },
+          {
+            "a": {
+              "@href": "http://www.klab.caltech.edu/~harel/share/gbvs.php",
+              "#text": "Graph-Based Visual Saliency [NIPS 2006]"
+            },
+            "#text": "Jonathan Harel, Christof Koch, Pietro Perona."
+          },
+          {
+            "a": {
+              "@href": "http://www.vision.caltech.edu/~harel/share/gbvs.zip",
+              "#text": "matlab"
+            }
+          },
+          "0.80",
+          "0.51",
+          "2.99",
+          "0.79",
+          "0.58",
+          "0.50",
+          "1.23",
+          "0.80",
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from code (DL:20/08/2013) with default params"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_GBVS.csv",
+              "#text": "Complete results"
+            },
+            "#text": "last tested: 26/01/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/gbvs.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "@bgcolor": "#DDDDDD",
+        "td": [
+          {
+            "a": {
+              "@href": "javascript:void(0);",
+              "@onclick": "return popitup('baselineExp/permutation.html')",
+              "#text": "[?]"
+            },
+            "#text": "Baseline: Permutation Control"
+          },
+          "",
+          "",
+          "0.80",
+          "0.55",
+          "2.25",
+          "0.71",
+          "0.50",
+          "0.63",
+          "1.63",
+          "2.42",
+          {
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_PermControl.csv",
+              "#text": "Complete results"
+            }
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/chance_other.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          "IttiKoch2",
+          "Implementation by Jonathan Harel (part of GBVS toolbox)",
+          {
+            "a": {
+              "@href": "http://www.vision.caltech.edu/~harel/share/gbvs.php",
+              "#text": "matlab"
+            }
+          },
+          "0.77",
+          "0.48",
+          "3.44",
+          "0.76",
+          "0.59",
+          "0.42",
+          "1.06",
+          "0.92",
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from code (DL:20/08/2013) with default params"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_IttiKoch2.csv",
+              "#text": "Complete results"
+            },
+            "#text": "last tested: 26/01/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/ittikoch2.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "http://webee.technion.ac.il/labs/cgm/Computer-Graphics-Multimedia/Software/Saliency/Saliency.html",
+              "#text": "Context-Aware saliency"
+            }
+          },
+          {
+            "a": [
+              {
+                "@href": "http://webee.technion.ac.il/~ayellet/Ps/10-Saliency.pdf",
+                "#text": "[CVPR 2010]"
+              },
+              {
+                "@href": "http://webee.technion.ac.il/~lihi/Publications/12-PAMI-ContextAwareSaliency.pdf",
+                "#text": "[PAMI 2012]"
+              }
+            ],
+            "#text": "Stas Goferman, Lihi Zelnik-Manor, Ayellet Tal. Context-Aware Saliency Detection"
+          },
+          {
+            "a": {
+              "@href": "http://webee.technion.ac.il/labs/cgm/Computer-Graphics-Multimedia/Software/Saliency/Saliency.zip",
+              "#text": "matlab"
+            }
+          },
+          "0.77",
+          "0.50",
+          "3.09",
+          "0.76",
+          "0.60",
+          "0.42",
+          "1.07",
+          "1.04",
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from code (DL:15/01/2014) with default params"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_Context.csv",
+              "#text": "Complete results"
+            },
+            "#text": "last tested: 26/01/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/context.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "@bgcolor": "#DDDDDD",
+        "td": [
+          {
+            "a": {
+              "@href": "javascript:void(0);",
+              "@onclick": "return popitup('baselineExp/onehuman.html')",
+              "#text": "[?]"
+            },
+            "#text": "Baseline: one human"
+          },
+          "",
+          "",
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "#text": [
+              "0.76",
+              "min: 0.39",
+              "max: 0.95"
+            ]
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "#text": [
+              "0.43",
+              "min: 0.00",
+              "max: 0.78"
+            ]
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "#text": [
+              "2.51",
+              "min: 0.00",
+              "max: 16.57"
+            ]
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "#text": [
+              "0.67",
+              "min: 0.45",
+              "max: 0.92"
+            ]
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "#text": [
+              "0.56",
+              "min: 0.38",
+              "max: 0.86"
+            ]
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "#text": [
+              "0.56",
+              "min: -0.13",
+              "max: 0.96"
+            ]
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "#text": [
+              "1.54",
+              "min: -0.31",
+              "max: 5.50"
+            ]
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "#text": [
+              "7.77",
+              "min: 0.81",
+              "max: 23.81"
+            ]
+          },
+          {
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_OneObserver.csv",
+              "#text": "Complete results"
+            }
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/one_human.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "http://persoal.citius.usc.es/xose.vidal/research/aws/AWSmodel.html",
+              "#text": "Adaptive Whitening Saliency Model (AWS)"
+            }
+          },
+          {
+            "a": {
+              "@href": "http://www.journalofvision.org/content/12/6/17",
+              "#text": "On the relationship between optical variability, visual saliency, and eye fixations: A computational approach [JoV 2012]"
+            },
+            "#text": "Anton Garcia-Diaz, Victor Leboran, Xose R. Fdez-Vidal, Xose M. Pardo."
+          },
+          {
+            "a": {
+              "@href": "http://persoal.citius.usc.es/xose.vidal/code/aws.rar",
+              "#text": "matlab"
+            }
+          },
+          "0.76",
+          "0.49",
+          "3.36",
+          "0.75",
+          "0.61",
+          "0.42",
+          "1.09",
+          "0.94",
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from code (DL:17/01/2014) with params: rescale=0.5"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_AWS.csv",
+              "#text": "Complete results"
+            },
+            "#text": "last tested: 26/01/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/aws.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          "AIM",
+          {
+            "a": {
+              "@href": "http://www.journalofvision.org/content/7/9/950",
+              "#text": "Attention based on information maximization [JoV 2007]"
+            },
+            "#text": "Neil Bruce, John Tsotsos."
+          },
+          {
+            "a": {
+              "@href": "http://www-sop.inria.fr/members/Neil.Bruce/AIM.zip",
+              "#text": "matlab"
+            }
+          },
+          "0.76",
+          "0.44",
+          "3.69",
+          "0.75",
+          "0.60",
+          "0.36",
+          "0.89",
+          "1.13",
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from code (DL:15/01/2014) with params: resize=0.5, convolve=1, thebasis='31infomax975'"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_AIM.csv",
+              "#text": "Complete results"
+            },
+            "#text": "last tested: 23/09/2014"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/AIM.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "http://persoal.citius.usc.es/xose.vidal/code.php?person=xose",
+              "#text": "Weighted Maximum Phase Alignment Model (WMAP)"
+            }
+          },
+          {
+            "a": {
+              "@href": "http://www.intechopen.com/books/object-recognition/scene-recognition-through-visual-attention-and-image-features-a-comparison-between-sift-and-surf-app",
+              "#text": "Scene Recognition through Visual Attention and Image Features: A Comparison between SIFT and SURF Approaches"
+            },
+            "#text": "Fernando Lopez-Garcia, Xose Ramon Fdez-Vidal, Xose Manuel Pardo, Raquel Dosil."
+          },
+          {
+            "a": {
+              "@href": "http://persoal.citius.usc.es/xose.vidal/code/WMAP.rar",
+              "#text": "matlab"
+            }
+          },
+          "0.75",
+          "0.47",
+          "3.28",
+          "0.69",
+          "0.60",
+          "0.38",
+          "1.01",
+          "1.65",
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from code (DL:17/01/2014) with params: rescale=0.5"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_WMAP.csv",
+              "#text": "Complete results"
+            },
+            "#text": "last tested: 26/01/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/wmap.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "http://people.csail.mit.edu/torralba/GlobalFeaturesAndAttention/",
+              "#text": "Torralba saliency"
+            }
+          },
+          {
+            "a": {
+              "@href": "http://people.csail.mit.edu/torralba/publications/torralbaEyeMovements.pdf",
+              "#text": "Contextual Guidance of Attention in Natural scenes: The role of Global features on object search [Psychological Review 2006]"
+            },
+            "#text": "Antonio Torralba, Aude Oliva, Monica S. Castelhano, John M. Henderson."
+          },
+          {
+            "a": {
+              "@href": "http://saliency.mit.edu/Code/torralbaSaliency.m",
+              "#text": "matlab"
+            }
+          },
+          "0.72",
+          "0.45",
+          "3.44",
+          "0.71",
+          "0.58",
+          "0.33",
+          "0.85",
+          "1.60",
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from code (here) with default params"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_Torralba.csv",
+              "#text": "Complete results"
+            },
+            "#text": "last tested: 26/01/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/torralba.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "http://cat.uab.cat/Research/Attention/",
+              "#text": "Murray model (Chromatic Induction Wavelet Model)"
+            }
+          },
+          "Naila Murray, Maria Vanrell, Xavier Otazu, C. Alejandro Parraga. Saliency Estimation Using a Non-Parametric Low-Level Vision Model [CVPR 2011]",
+          {
+            "a": {
+              "@href": "http://www.cat.uab.cat/Software/Saliency/SIM.zip",
+              "#text": "matlab"
+            }
+          },
+          "0.70",
+          "0.43",
+          "3.79",
+          "0.70",
+          "0.59",
+          "0.30",
+          "0.77",
+          "1.14",
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from code (DL:29/05/2014) with default params"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_Murray.csv",
+              "#text": "Complete results"
+            },
+            "#text": "last tested: 26/01/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/murray.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "http://cseweb.ucsd.edu/~l6zhang/",
+              "#text": "SUN saliency"
+            }
+          },
+          {
+            "a": {
+              "@href": "http://journalofvision.org/8/7/32/",
+              "#text": "SUN: A Bayesian framework for saliency using natural statistics [JoV 2008]"
+            },
+            "#text": "Lingyun Zhang, Matthew H. Tong, Tim K. Marks, Honghao Shan, Garrison W. Cottrell."
+          },
+          {
+            "a": {
+              "@href": "http://cseweb.ucsd.edu/~l6zhang/code/imagesaliency.zip",
+              "#text": "matlab"
+            }
+          },
+          "0.70",
+          "0.43",
+          "3.42",
+          "0.69",
+          "0.57",
+          "0.30",
+          "0.77",
+          "2.22",
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from code (DL:15/01/2014) with params: scale=0.5"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_SUN.csv",
+              "#text": "Complete results"
+            },
+            "#text": "last tested: 26/01/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/sun.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "http://ivrgwww.epfl.ch/supplementary_material/RK_CVPR09/index.html",
+              "#text": "Achanta"
+            }
+          },
+          {
+            "a": {
+              "@href": "http://infoscience.epfl.ch/record/135217/files/1708.pdf",
+              "#text": "Frequency-tuned Salient Region Detection [CVPR 2009]"
+            },
+            "#text": "Radhakrishna Achanta, Sheila Hemami, Francisco Estrada, Sabine Susstrunk."
+          },
+          {
+            "a": [
+              {
+                "@href": "http://ivrgwww.epfl.ch/supplementary_material/RK_CVPR09/SourceCode/Saliency_CVPR2009.m",
+                "#text": "matlab"
+              },
+              {
+                "@href": "http://ivrgwww.epfl.ch/supplementary_material/RK_CVPR09/index.html",
+                "#text": "c++, executable"
+              }
+            ],
+            "#text": ","
+          },
+          "0.57",
+          "0.33",
+          "4.46",
+          "0.55",
+          "0.52",
+          "0.11",
+          "0.29",
+          "2.31",
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from code (DL:15/01/2014) with params: GausParam=[3,3]"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_Achanta.csv",
+              "#text": "Complete results"
+            },
+            "#text": "last tested: 26/01/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/Achanta.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "td": [
+          {
+            "a": {
+              "@href": "http://www.saliencytoolbox.net/",
+              "#text": "IttiKoch"
+            }
+          },
+          {
+            "a": {
+              "@href": "http://www.saliencytoolbox.net/",
+              "#text": "Modeling attention to salient proto-objects [Neural Networks 2006]"
+            },
+            "#text": "Implemented in the Saliency Toolbox by: Dirk Walther, Christof Koch."
+          },
+          {
+            "a": {
+              "@href": "http://www.saliencytoolbox.net/downloadForm.html",
+              "#text": "matlab"
+            }
+          },
+          "0.56",
+          "0.34",
+          "4.66",
+          "0.53",
+          "0.52",
+          "0.09",
+          "0.25",
+          "6.71",
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "font": {
+              "@color": "DarkGray",
+              "#text": "maps from code (DL:15/01/2014) with params: sampleFactor='dyadic'"
+            },
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_IttiKoch1.csv",
+              "#text": "Complete results"
+            },
+            "#text": "last tested: 26/01/2015"
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/ittikoch1.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "@bgcolor": "#DDDDDD",
+        "td": [
+          {
+            "a": {
+              "@href": "javascript:void(0);",
+              "@onclick": "return popitup('baselineExp/chance.html')",
+              "#text": "[?]"
+            },
+            "#text": "Baseline: Chance"
+          },
+          "",
+          {
+            "a": {
+              "@href": "http://saliency.mit.edu/Code/chanceModel.m",
+              "#text": "matlab"
+            }
+          },
+          "0.50",
+          "0.32",
+          "5.30",
+          "0.50",
+          "0.50",
+          "0.00",
+          "0.00",
+          "2.00",
+          {
+            "a": {
+              "@href": "CSVfiles_acrossModels/all_results_Chance.csv",
+              "#text": "Complete results"
+            }
+          },
+          {
+            "img": {
+              "@src": "MAPsamples_CAT2000/Chance.jpg"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

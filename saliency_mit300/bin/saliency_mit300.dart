@@ -89,7 +89,7 @@ String _generateLaTeXLineForModelNameQuery(
       '${modelResultsForQuery.cc} & ${modelResultsForQuery.nss} & ${modelResultsForQuery.kl} \\\\';
 }
 
-Future<void> _printLatexLinesForDataset(String dataset) async {
+Future<void> _printLatexTableColumnLinesForDataset(String dataset) async {
   final mit300Json = await _readJsonFile('./data/${dataset}_results.json');
 
   final tbody = mit300Json['tbody'];
@@ -130,5 +130,5 @@ Future<void> _printLatexLinesForDataset(String dataset) async {
 void main(List<String> arguments) {
   final dataset = arguments.first;
 
-  _printLatexLinesForDataset(dataset);
+  _printLatexTableColumnLinesForDataset(dataset);
 }

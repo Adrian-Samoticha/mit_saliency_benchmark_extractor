@@ -10,6 +10,11 @@ Future<dynamic> _readJsonFile(String filePath) async {
   return map;
 }
 
+String _findNumberInJson(dynamic json) {
+  final number = RegExp(r'\d+(\.\d+)?').firstMatch(json.toString());
+  return number?.group(0) ?? '--';
+}
+
 ModelResults? _modelResultsFromJson(Map<String, dynamic> json) {
   final td = json['td'];
 
@@ -23,14 +28,14 @@ ModelResults? _modelResultsFromJson(Map<String, dynamic> json) {
 
   return ModelResults(
     modelName: td[0].toString(),
-    aucJudd: td[3].toString(),
-    sim: td[4].toString(),
-    emd: td[5].toString(),
-    aucBorji: td[6].toString(),
-    sAUC: td[7].toString(),
-    cc: td[8].toString(),
-    nss: td[9].toString(),
-    kl: td[10].toString(),
+    aucJudd: _findNumberInJson(td[3]),
+    sim: _findNumberInJson(td[4]),
+    emd: _findNumberInJson(td[5]),
+    aucBorji: _findNumberInJson(td[6]),
+    sAUC: _findNumberInJson(td[7]),
+    cc: _findNumberInJson(td[8]),
+    nss: _findNumberInJson(td[9]),
+    kl: _findNumberInJson(td[10]),
   );
 }
 
@@ -93,15 +98,23 @@ Future<void> _printLatexLinesForDataset(String dataset) async {
   final modelResults = _modelResultsFromJsonList(tr);
 
   const models = [
-    _ModelNameQuery("SAM-ResNet", "SAM-ResNet~\\cite{8400593}"),
-    _ModelNameQuery("SAM-VGG", "SAM-VGG~\\cite{8400593}"),
-    _ModelNameQuery("PDP", "PDP~\\cite{jetley2018endtoend}"),
-    _ModelNameQuery("DeepFix", "DeepFix~\\cite{7937829}"),
-    _ModelNameQuery("SalGAN", "SalGAN~\\cite{Pan_2017_SalGAN}"),
-    _ModelNameQuery("Mr-CNN", "Mr-CNN~\\cite{7298633}"),
-    _ModelNameQuery("SALICON", "SALICON~\\cite{7410395}"),
-    _ModelNameQuery("eDN", "eDN~\\cite{6909754}"),
-    _ModelNameQuery("Judd Model", "Judd~\\cite{5459462}"),
+    _ModelNameQuery("SAM-ResNet", "SAM-ResNet \\cite{8400593}"),
+    _ModelNameQuery("SAM-VGG", "SAM-VGG \\cite{8400593}"),
+    _ModelNameQuery("PDP", "PDP \\cite{jetley2018endtoend}"),
+    _ModelNameQuery("DeepFix", "DeepFix \\cite{7937829}"),
+    _ModelNameQuery("SalGAN", "SalGAN \\cite{Pan_2017_SalGAN}"),
+    _ModelNameQuery("SalNet", "Pan (deep) \\cite{7780440}"),
+    _ModelNameQuery("JuntingNet", "Pan (shallow) \\cite{7780440}"),
+    _ModelNameQuery("Mr-CNN", "Mr-CNN \\cite{7298633}"),
+    _ModelNameQuery("SALICON", "SALICON \\cite{7410395}"),
+    _ModelNameQuery("Deep Gaze 2", "Deep Gaze~II \\cite{kümmerer2015deep}"),
+    _ModelNameQuery("Deep Gaze 1", "Deep Gaze~I \\cite{kümmerer2015deep}"),
+    _ModelNameQuery("eDN", "eDN \\cite{6909754}"),
+    _ModelNameQuery("BMS", "BMS \\cite{6751128}"),
+    _ModelNameQuery("Judd Model", "Judd \\cite{5459462}"),
+    _ModelNameQuery("Hou \\& Zhang", "Hou \\& Zhang \\cite{4270292}"),
+    _ModelNameQuery("GBVS", "GBVS \\cite{NIPS2006_4db0f8b0}"),
+    _ModelNameQuery("Itti", "Itti et al. \\cite{730558}"),
   ];
 
   final longestDisplayName =

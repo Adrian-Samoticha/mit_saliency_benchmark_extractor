@@ -175,7 +175,9 @@ String _generatePerformancePlot(
       '\\caption{Performance of various saliency map prediction models, measured by their NSS score. '
       'Performance measurements are taken from \\cite{mit-saliency-benchmark}. '
       'Models drawn in black are present in Table~\\ref{tab:mit300_perf}. '
-      'Only models whose release date is present in \\cite{mit-saliency-benchmark} are included.}\n'
+      'Only models whose release date is present in \\cite{mit-saliency-benchmark} are included. '
+      'The code that was used to generate this figure is available at: \\url{'
+      'https://github.com/Adrian-Samoticha/mit_saliency_benchmark_extractor}}\n'
       '\\end{figure}\n';
 }
 

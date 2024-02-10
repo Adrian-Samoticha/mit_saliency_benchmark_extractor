@@ -2,7 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
+import 'package:num_remap/num_remap.dart';
 import 'package:saliency_mit300/model_results.dart';
+import 'package:saliency_mit300/task.dart';
+import 'package:sprintf/sprintf.dart';
 
 Future<dynamic> _readJsonFile(String filePath) async {
   var input = await File(filePath).readAsString();
@@ -28,6 +31,7 @@ ModelResults? _modelResultsFromJson(Map<String, dynamic> json) {
 
   return ModelResults(
     modelName: td[0].toString(),
+    published: td[1].toString(),
     aucJudd: _findNumberInJson(td[3]),
     sim: _findNumberInJson(td[4]),
     emd: _findNumberInJson(td[5]),
@@ -36,6 +40,7 @@ ModelResults? _modelResultsFromJson(Map<String, dynamic> json) {
     cc: _findNumberInJson(td[8]),
     nss: _findNumberInJson(td[9]),
     kl: _findNumberInJson(td[10]),
+    json: td,
   );
 }
 
@@ -70,13 +75,17 @@ String rightPad(String input, int length) {
   return input + ' ' * (length - input.length);
 }
 
-String _generateLaTeXLineForModelNameQuery(
+ModelResults? _findModelResultsFromQuery(
+    _ModelNameQuery query, List<ModelResults> modelResults) {
+  return modelResults.map<ModelResults?>((e) => e).firstWhere(
+      (element) => _isModel(query.query, element!),
+      orElse: () => null);
+}
+
+String _generateLaTeXTableColumnLineForModelNameQuery(
     _ModelNameQuery query, List<ModelResults> modelResults,
     {int nameLength = 0}) {
-  final modelResultsForQuery = modelResults
-      .map<ModelResults?>((e) => e)
-      .firstWhere((element) => _isModel(query.query, element!),
-          orElse: () => null);
+  final modelResultsForQuery = _findModelResultsFromQuery(query, modelResults);
 
   if (modelResultsForQuery == null) {
     return "% “${query.displayName}” missing";
@@ -89,7 +98,89 @@ String _generateLaTeXLineForModelNameQuery(
       '${modelResultsForQuery.cc} & ${modelResultsForQuery.nss} & ${modelResultsForQuery.kl} \\\\';
 }
 
-Future<void> _printLatexTableColumnLinesForDataset(String dataset) async {
+bool _isModelInQueryList(
+    ModelResults modelResults, List<_ModelNameQuery> queryList) {
+  return queryList.any((element) => _isModel(element.query, modelResults));
+}
+
+String _generatePerformancePlot(
+    List<ModelResults> modelResults, List<_ModelNameQuery> selectedModels) {
+  var elementsString = '';
+
+  // sort model results by release year
+  final sortedModelResults = modelResults
+      .where((e) => e.releaseDate != null)
+      .toList()
+    ..sort((a, b) => a.releaseDate!.compareTo(b.releaseDate!));
+
+  final earliestReleaseDate = int.parse(sortedModelResults.first.releaseDate!);
+  final latestReleaseDate = int.parse(sortedModelResults.last.releaseDate!);
+
+  const xMin = 0.0;
+  const xMax = 12.0;
+
+  final worstPerformance =
+      sortedModelResults.map((e) => double.parse(e.nss)).reduce(min);
+  final bestPerformance =
+      sortedModelResults.map((e) => double.parse(e.nss)).reduce(max);
+
+  const yMin = 0.0;
+  const yMax = 15.0;
+
+  for (var model in sortedModelResults) {
+    final releaseDate = int.parse(model.releaseDate!);
+    final x =
+        releaseDate.remap(earliestReleaseDate, latestReleaseDate, xMin, xMax);
+    final y = double.parse(model.nss)
+        .remap(worstPerformance, bestPerformance, yMin, yMax);
+
+    final name = model.readableName;
+
+    final isModelSelected = _isModelInQueryList(model, selectedModels);
+
+    final color = isModelSelected ? 'black' : 'gray';
+    final fontSize = isModelSelected ? 'small' : 'tiny';
+    final nodeSize = isModelSelected ? '2pt' : '1.75pt';
+
+    elementsString +=
+        '\\filldraw[$color] ($x, $y) circle ($nodeSize) node[anchor=west]{\\$fontSize $name};\n';
+  }
+
+  elementsString += '\\draw[black, thick] (0,0) -- ($xMax,0);\n';
+  elementsString += '\\draw[black, thick] (0,0) -- (0,$yMax);\n';
+
+  // draw year lines and numbers
+  for (int i = earliestReleaseDate; i <= latestReleaseDate; i += 1) {
+    final x = i.remap(earliestReleaseDate, latestReleaseDate, xMin, xMax);
+    elementsString += '\\draw[black, thick] ($x,-0.1) -- ($x,0.1);\n'
+        '\\node[rotate=270] at ($x,-0.75) {$i};\n';
+  }
+
+  // draw performance lines and numbers
+  for (double i = 0.0; i <= 1.0; i += 0.1) {
+    final performance = i.remap(0.0, 1.0, worstPerformance, bestPerformance);
+    final y = performance.remap(worstPerformance, bestPerformance, yMin, yMax);
+
+    final performanceString = sprintf('%.2f', [performance]);
+    elementsString += '\\draw[black, thick] (-0.1,$y) -- (0.1,$y);\n'
+        '\\node at (-0.75,$y) {$performanceString};\n';
+  }
+
+  return '\\begin{figure}\n'
+      '\\centering\n'
+      '\\begin{tikzpicture}\n'
+      '$elementsString'
+      '\\end{tikzpicture}\n'
+      '\\label{fig:mit300_nss_perf_plot}\n'
+      '\\caption{Performance of various saliency map prediction models, measured by their NSS score. '
+      'Performance measurements are taken from \\cite{mit-saliency-benchmark}. '
+      'Models drawn in black are present in Table~\\ref{tab:mit300_perf}. '
+      'Only models whose release date is present in \\cite{mit-saliency-benchmark} are included.}\n'
+      '\\end{figure}\n';
+}
+
+Future<void> _printLatexTableColumnLinesForDataset(
+    String dataset, Task task) async {
   final mit300Json = await _readJsonFile('./data/${dataset}_results.json');
 
   final tbody = mit300Json['tbody'];
@@ -97,7 +188,7 @@ Future<void> _printLatexTableColumnLinesForDataset(String dataset) async {
 
   final modelResults = _modelResultsFromJsonList(tr);
 
-  const models = [
+  const selectedModels = [
     _ModelNameQuery("SAM-ResNet", "SAM-ResNet \\cite{8400593}"),
     _ModelNameQuery("SAM-VGG", "SAM-VGG \\cite{8400593}"),
     _ModelNameQuery("PDP", "PDP \\cite{jetley2018endtoend}"),
@@ -117,18 +208,28 @@ Future<void> _printLatexTableColumnLinesForDataset(String dataset) async {
     _ModelNameQuery("Itti", "Itti et al. \\cite{730558}"),
   ];
 
-  final longestDisplayName =
-      models.map((e) => e.displayName.length).reduce(max);
+  switch (task) {
+    case Task.generateTableRows:
+      final longestDisplayName =
+          selectedModels.map((e) => e.displayName.length).reduce(max);
 
-  for (var model in models) {
-    final latexLine = _generateLaTeXLineForModelNameQuery(model, modelResults,
-        nameLength: longestDisplayName);
-    print(latexLine);
+      for (var model in selectedModels) {
+        final latexLine = _generateLaTeXTableColumnLineForModelNameQuery(
+            model, modelResults,
+            nameLength: longestDisplayName);
+        print(latexLine);
+      }
+
+    case Task.generatePerformancePlot:
+      final plot = _generatePerformancePlot(modelResults, selectedModels);
+      print(plot);
   }
 }
 
 void main(List<String> arguments) {
   final dataset = arguments.first;
+  final task =
+      Task.values.firstWhere((element) => element.name == arguments[1]);
 
-  _printLatexTableColumnLinesForDataset(dataset);
+  _printLatexTableColumnLinesForDataset(dataset, task);
 }

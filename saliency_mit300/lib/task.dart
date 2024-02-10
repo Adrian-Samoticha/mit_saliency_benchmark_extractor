@@ -1,0 +1,4 @@
+enum Task {
+  generateTableRows,
+  generatePerformancePlot,
+}

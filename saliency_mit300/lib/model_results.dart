@@ -33,10 +33,10 @@ class ModelResults {
 
   String? _findYearInString(String input) {
     final matchWithClosingSquareBracket =
-        RegExp(r'(19|20)\d{2}]').firstMatch(input);
+        RegExp(r'(19|20)\d{2}(?=])').firstMatch(input);
 
     if (matchWithClosingSquareBracket != null) {
-      return matchWithClosingSquareBracket.group(0)!.substring(0, 4);
+      return matchWithClosingSquareBracket.group(0)!;
     }
 
     final match = RegExp(r'(19|20)\d{2}').firstMatch(input);

@@ -133,7 +133,8 @@ String _getPointColor(bool isModelSelected, String dataSource) {
 
 String _generatePerformancePlot(
     List<ModelResults> modelResults, List<_ModelNameQuery> selectedModels) {
-  var elementsString = '';
+  var backgroundElementsString = '';
+  var foregroundElementsString = '';
 
   // sort model results by release year
   final sortedModelResults = modelResults
@@ -170,17 +171,23 @@ String _generatePerformancePlot(
     final fontSize = isModelSelected ? 'small' : 'tiny';
     final nodeSize = isModelSelected ? '2pt' : '1.75pt';
 
-    elementsString +=
+    final addedElementString =
         '\\filldraw[$color] ($x, $y) circle ($nodeSize) node[anchor=west]{\\$fontSize $name};\n';
+
+    if (isModelSelected) {
+      foregroundElementsString += addedElementString;
+    } else {
+      backgroundElementsString += addedElementString;
+    }
   }
 
-  elementsString += '\\draw[black, thick] (0,0) -- ($xMax,0);\n';
-  elementsString += '\\draw[black, thick] (0,0) -- (0,$yMax);\n';
+  foregroundElementsString += '\\draw[black, thick] (0,0) -- ($xMax,0);\n';
+  foregroundElementsString += '\\draw[black, thick] (0,0) -- (0,$yMax);\n';
 
   // draw year lines and numbers
   for (int i = earliestReleaseDate; i <= latestReleaseDate; i += 1) {
     final x = i.remap(earliestReleaseDate, latestReleaseDate, xMin, xMax);
-    elementsString += '\\draw[black, thick] ($x,-0.1) -- ($x,0.1);\n'
+    foregroundElementsString += '\\draw[black, thick] ($x,-0.1) -- ($x,0.1);\n'
         '\\node[rotate=270] at ($x,-0.75) {$i};\n';
   }
 
@@ -190,14 +197,15 @@ String _generatePerformancePlot(
     final y = performance.remap(worstPerformance, bestPerformance, yMin, yMax);
 
     final performanceString = sprintf('%.2f', [performance]);
-    elementsString += '\\draw[black, thick] (-0.1,$y) -- (0.1,$y);\n'
+    foregroundElementsString += '\\draw[black, thick] (-0.1,$y) -- (0.1,$y);\n'
         '\\node at (-0.75,$y) {$performanceString};\n';
   }
 
   return '\\begin{figure}\n'
       '\\centering\n'
       '\\begin{tikzpicture}\n'
-      '$elementsString'
+      '$backgroundElementsString'
+      '$foregroundElementsString'
       '\\end{tikzpicture}\n'
       '\\label{fig:mit300_nss_perf_plot}\n'
       '\\caption{Performance of various saliency map prediction models, measured by their NSS score. '

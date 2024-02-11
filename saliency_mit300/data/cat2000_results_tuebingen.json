@@ -1,0 +1,2103 @@
+{
+  "tbody": {
+    "@aria-live": "polite",
+    "@aria-relevant": "all",
+    "tr": [
+      {
+        "@class": "probabilistic",
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "em": "Gold Standard"
+            }
+          },
+          {
+            "p": {
+              "em": "Gaussian kernel density estimate using all fixations of an image with uniform mixture component. Crossvalidated over subjects. Joint performance."
+            }
+          },
+          "",
+          {
+            "@class": "train-loss",
+            "#text": "0.8026"
+          },
+          {
+            "@class": "",
+            "#text": "0.9159"
+          },
+          {
+            "@class": "",
+            "#text": "0.7865"
+          },
+          {
+            "@class": "",
+            "#text": "2.7429"
+          },
+          {
+            "@class": "",
+            "#text": "0.9685"
+          },
+          {
+            "@class": "",
+            "#text": "0.0893"
+          },
+          {
+            "@class": "",
+            "#text": "0.8657"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "#text": [
+              "First tested 2023-07-06",
+              "Last tested 2023-07-06"
+            ]
+          }
+        ]
+      },
+      {
+        "@class": "probabilistic",
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "em": "Gold Standard (leave-one-subject-out)"
+            }
+          },
+          {
+            "p": {
+              "em": "Gaussian kernel density estimate using all fixations of an image with uniform mixture component. Crossvalidated over subjects. Leave-one-subject-out performance"
+            }
+          },
+          "",
+          {
+            "@class": "train-loss",
+            "#text": "0.4730"
+          },
+          {
+            "@class": "",
+            "#text": "0.8840"
+          },
+          {
+            "@class": "",
+            "#text": "0.6930"
+          },
+          {
+            "@class": "",
+            "#text": "2.4878"
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": ""
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "#text": [
+              "First tested 2023-07-05",
+              "Last tested 2023-07-05"
+            ]
+          }
+        ]
+      },
+      {
+        "@class": "probabilistic",
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "a": {
+                "@href": "https://github.com/matthias-k/DeepGaze",
+                "#text": "DeepGaze IIE"
+              }
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://openaccess.thecvf.com/content/ICCV2021/html/Linardos_DeepGaze_IIE_Calibrated_Prediction_in_and_Out-of-Domain_for_State-of-the-Art_Saliency_ICCV_2021_paper.html",
+                "#text": "DeepGaze IIE: Calibrated prediction in and out-of-domain for state-of-the-art saliency modeling [ICCV 2021]"
+              },
+              "#text": "A. Linardos, M. Kümmerer, O. Press, M. Bethge:"
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://github.com/matthias-k/DeepGaze",
+                "#text": "python (pytorch)"
+              }
+            }
+          },
+          {
+            "@class": "train-loss",
+            "#text": "0.1893"
+          },
+          {
+            "@class": "",
+            "#text": "0.8692"
+          },
+          {
+            "@class": "",
+            "#text": "0.6677"
+          },
+          {
+            "@class": "",
+            "#text": "2.1122"
+          },
+          {
+            "@class": "",
+            "#text": "0.8189"
+          },
+          {
+            "@class": "",
+            "#text": "0.3448"
+          },
+          {
+            "@class": "",
+            "#text": "0.7060"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": "densities from authors",
+            "#text": [
+              "First tested 2023-07-05",
+              "Last tested 2023-07-05"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": "Ani"
+          },
+          {
+            "p": "(work in progress)"
+          },
+          "",
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.8687"
+          },
+          {
+            "@class": "",
+            "#text": "0.6046"
+          },
+          {
+            "@class": "",
+            "#text": "2.0657"
+          },
+          {
+            "@class": "",
+            "#text": "0.7963"
+          },
+          {
+            "@class": "",
+            "#text": "0.4818"
+          },
+          {
+            "@class": "",
+            "#text": "0.7064"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": "maps from authors",
+            "#text": [
+              "First tested 2022-05-23",
+              "Last tested 2023-07-11"
+            ]
+          }
+        ]
+      },
+      {
+        "@class": "probabilistic",
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "a": {
+                "@href": "https://deepgaze.bethgelab.org",
+                "#text": "DeepGaze II"
+              }
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://openaccess.thecvf.com/content_iccv_2017/html/Kummerer_Understanding_Low-_and_ICCV_2017_paper.html",
+                "#text": "Understanding Low- and High-Level Contributions to Fixation Prediction [ICCV 2017]"
+              },
+              "#text": "Matthias Kümmerer, Thomas S. A. Wallis, Leon A. Gatys, Matthias Bethge."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://deepgaze.bethgelab.org",
+                "#text": "python (tensorflow)"
+              }
+            }
+          },
+          {
+            "@class": "train-loss",
+            "#text": "0.0839"
+          },
+          {
+            "@class": "",
+            "#text": "0.8640"
+          },
+          {
+            "@class": "",
+            "#text": "0.6498"
+          },
+          {
+            "@class": "",
+            "#text": "1.9619"
+          },
+          {
+            "@class": "",
+            "#text": "0.7950"
+          },
+          {
+            "@class": "",
+            "#text": "0.3815"
+          },
+          {
+            "@class": "",
+            "#text": "0.6865"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "#text": [
+              "First tested 2021-04-09",
+              "Last tested 2023-07-04"
+            ]
+          }
+        ]
+      },
+      {
+        "@class": "probabilistic",
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "a": {
+                "@href": "https://deepgaze.bethgelab.org",
+                "#text": "ICF"
+              }
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://openaccess.thecvf.com/content_iccv_2017/html/Kummerer_Understanding_Low-_and_ICCV_2017_paper.html",
+                "#text": "Understanding Low- and High-Level Contributions to Fixation Prediction [ICCV 2017]"
+              },
+              "#text": "Matthias Kümmerer, Thomas S. A. Wallis, Leon A. Gatys, Matthias Bethge."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://deepgaze.bethgelab.org",
+                "#text": "python (tensorflow)"
+              }
+            }
+          },
+          {
+            "@class": "train-loss",
+            "#text": "-0.0229"
+          },
+          {
+            "@class": "",
+            "#text": "0.8561"
+          },
+          {
+            "@class": "",
+            "#text": "0.6187"
+          },
+          {
+            "@class": "",
+            "#text": "1.9588"
+          },
+          {
+            "@class": "",
+            "#text": "0.7791"
+          },
+          {
+            "@class": "",
+            "#text": "0.4448"
+          },
+          {
+            "@class": "",
+            "#text": "0.6697"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "#text": [
+              "First tested 2023-07-24",
+              "Last tested 2023-07-24"
+            ]
+          }
+        ]
+      },
+      {
+        "@class": "probabilistic",
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          "DeepGaze I",
+          {
+            "p": {
+              "a": {
+                "@href": "http://arxiv.org/abs/1411.1045",
+                "#text": "Deep Gaze I: Boosting Saliency Prediction with Feature Maps Trained on ImageNet [arxiv 2014, ICLR 2015 workshop]"
+              },
+              "#text": "Matthias Kümmerer, Lucas Theis, Matthias Bethge."
+            }
+          },
+          "",
+          {
+            "@class": "train-loss",
+            "#text": "-0.1546"
+          },
+          {
+            "@class": "",
+            "#text": "0.8524"
+          },
+          {
+            "@class": "",
+            "#text": "0.6184"
+          },
+          {
+            "@class": "",
+            "#text": "1.8430"
+          },
+          {
+            "@class": "",
+            "#text": "0.7403"
+          },
+          {
+            "@class": "",
+            "#text": "0.5094"
+          },
+          {
+            "@class": "",
+            "#text": "0.6391"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": "predictions from authors",
+            "#text": [
+              "First tested 2023-07-04",
+              "Last tested 2023-07-04"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "a": {
+                "@href": "http://coxlab.org/saliency/",
+                "#text": "Ensembles of Deep Networks (eDN)"
+              }
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://coxlab.org/pdfs/cvpr2014_vig_saliency.pdf",
+                "#text": "Large-Scale Optimization of Hierarchical Features for Saliency Prediction in Natural Images [CVPR 2014]"
+              },
+              "#text": "Eleonora Vig, Michael Dorr, David Cox."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://github.com/coxlab/edn-cvpr2014",
+                "#text": "python"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.8470"
+          },
+          {
+            "@class": "",
+            "#text": "0.5782"
+          },
+          {
+            "@class": "",
+            "#text": "1.2092"
+          },
+          {
+            "@class": "",
+            "#text": "0.5003"
+          },
+          {
+            "@class": "",
+            "#text": "0.9832"
+          },
+          {
+            "@class": "",
+            "#text": "0.4508"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-04-01",
+              "Last tested 2023-07-07"
+            ]
+          }
+        ]
+      },
+      {
+        "@class": "probabilistic",
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "em": "Centerbias"
+            }
+          },
+          {
+            "p": {
+              "em": "leave-one-image out kernel density estimate with uniform mixture component"
+            }
+          },
+          "",
+          {
+            "@class": "train-loss",
+            "#text": "0.0000"
+          },
+          {
+            "@class": "",
+            "#text": "0.8445"
+          },
+          {
+            "@class": "",
+            "#text": "0.1166"
+          },
+          {
+            "@class": "",
+            "#text": "2.0870"
+          },
+          {
+            "@class": "",
+            "#text": "0.7833"
+          },
+          {
+            "@class": "",
+            "#text": "0.4875"
+          },
+          {
+            "@class": "",
+            "#text": "0.6559"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "#text": [
+              "First tested 2021-04-09",
+              "Last tested 2023-07-04"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "a": {
+                "@href": "http://people.csail.mit.edu/tjudd/WherePeopleLook/index.html",
+                "#text": "Judd Model"
+              }
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://people.csail.mit.edu/tjudd/WherePeopleLook/Docs/wherepeoplelook.pdf",
+                "#text": "Learning to predict where humans look [ICCV 2009]"
+              },
+              "#text": "Tilke Judd, Krista Ehinger, Fredo Durand, Antonio Torralba."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://people.csail.mit.edu/tjudd/WherePeopleLook/Code/JuddSaliencyModel.zip",
+                "#text": "matlab"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.8430"
+          },
+          {
+            "@class": "",
+            "#text": "0.5654"
+          },
+          {
+            "@class": "",
+            "#text": "1.2978"
+          },
+          {
+            "@class": "",
+            "#text": "0.5353"
+          },
+          {
+            "@class": "",
+            "#text": "0.9321"
+          },
+          {
+            "@class": "",
+            "#text": "0.4639"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/matthias-k/pysaliency",
+                "#text": "pysaliency"
+              },
+              "#text": "maps from original matlab code via"
+            },
+            "#text": [
+              "First tested 2023-07-04",
+              "Last tested 2023-07-06"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "a": {
+                "@href": "salicon.net/demo",
+                "#text": "SALICON"
+              }
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://ieeexplore.ieee.org/document/7410395/",
+                "#text": "SALICON: Reducing the Semantic Gap in Saliency Prediction by Adapting Deep Neural Networks"
+              },
+              "#text": [
+                "X. Hun C. Shen, X. Boix, Q. Zhao:",
+                ". ICCV 2015"
+              ]
+            }
+          },
+          "",
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.8406"
+          },
+          {
+            "@class": "",
+            "#text": "0.6466"
+          },
+          {
+            "@class": "",
+            "#text": "1.6754"
+          },
+          {
+            "@class": "",
+            "#text": "0.6402"
+          },
+          {
+            "@class": "",
+            "#text": "0.8011"
+          },
+          {
+            "@class": "",
+            "#text": "0.6158"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": "maps from SALICON web demo",
+            "#text": [
+              "First tested 2023-07-11",
+              "Last tested 2023-07-11"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "a": {
+                "@href": "http://web.cs.hacettepe.edu.tr/~erkut/projects/CovSal/",
+                "#text": "CovSal"
+              }
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://www.journalofvision.org/content/13/4/11.full.pdf+html",
+                "#text": "Visual saliency estimation by nonlinearly integrating features using region covariances [JoV 2013]"
+              },
+              "#text": "Erkut Erdem, Aykut Erdem."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://web.cs.hacettepe.edu.tr/~erkut/projects/CovSal/saliency.zip",
+                "#text": "matlab"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.8402"
+          },
+          {
+            "@class": "",
+            "#text": "0.5570"
+          },
+          {
+            "@class": "",
+            "#text": "1.7411"
+          },
+          {
+            "@class": "",
+            "#text": "0.6814"
+          },
+          {
+            "@class": "",
+            "#text": "1.4373"
+          },
+          {
+            "@class": "",
+            "#text": "0.6061"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-03-31",
+              "Last tested 2023-07-05"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": "LDS"
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://ieeexplore.ieee.org/document/7407672/",
+                "#text": "Learning Discriminative Subspaces on Random Contrasts for Image Saliency Analysis [TNNLS 2016]"
+              },
+              "#text": "Shu Fang, Jia Li, Yonghong Tian, Tiejun Huang, Xiaowu Chen."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://pkuml.org/resources/code.html",
+                "#text": "matlab"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.8281"
+          },
+          {
+            "@class": "",
+            "#text": "0.5669"
+          },
+          {
+            "@class": "",
+            "#text": "1.5356"
+          },
+          {
+            "@class": "",
+            "#text": "0.6131"
+          },
+          {
+            "@class": "",
+            "#text": "0.8719"
+          },
+          {
+            "@class": "",
+            "#text": "0.5785"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-04-01",
+              "Last tested 2023-07-06"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "a": {
+                "@href": "https://github.com/hrtavakoli/FES.git",
+                "#text": "Fast and Efficient Saliency (FES)"
+              }
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://link.springer.com/content/pdf/10.1007/978-3-642-21227-7_62",
+                "#text": "Fast and efficient saliency detection using sparse sampling and kernel density estimation [SCIA 2011]"
+              },
+              "#text": "Hamed Rezazadegan Tavakoli, Esa Rahtu, Janne Heikkila."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://github.com/hrtavakoli/FES.git",
+                "#text": "matlab"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.8212"
+          },
+          {
+            "@class": "",
+            "#text": "0.5450"
+          },
+          {
+            "@class": "",
+            "#text": "1.6103"
+          },
+          {
+            "@class": "",
+            "#text": "0.6325"
+          },
+          {
+            "@class": "",
+            "#text": "2.5243"
+          },
+          {
+            "@class": "",
+            "#text": "0.5643"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-03-31",
+              "Last tested 2023-07-06"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "a": {
+                "@href": "https://imatge-upc.github.io/saliency-salgan-2017/",
+                "#text": "SalGAN"
+              }
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://arxiv.org/abs/1701.01081",
+                "#text": "SalGAN: Visual Saliency Prediction with Generative Adversarial Networks [arXiv 2017]"
+              },
+              "#text": "Junting Pan, Cristian Canton, Kevin McGuinness, Noel E. O'Connor, Jordi Torres, Elisa Sayrol and Xavier Giro-i-Nieto."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://github.com/imatge-upc/saliency-salgan-2017",
+                "#text": "python"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.8085"
+          },
+          {
+            "@class": "",
+            "#text": "0.6354"
+          },
+          {
+            "@class": "",
+            "#text": "1.4624"
+          },
+          {
+            "@class": "",
+            "#text": "0.5668"
+          },
+          {
+            "@class": "",
+            "#text": "0.9392"
+          },
+          {
+            "@class": "",
+            "#text": "0.5441"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-04-01",
+              "Last tested 2023-07-07"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": "Deep Visual Attention (DVA)"
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://arxiv.org/abs/1705.02544",
+                "#text": "Deep Visual Attention Prediction [IEEE TIP 2018]"
+              },
+              "#text": "W. Wang, and J. Shen."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://github.com/wenguanwang/Deep-Visual-Attention-Prediction",
+                "#text": "matlab (caffe)"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.8000"
+          },
+          {
+            "@class": "",
+            "#text": "0.6253"
+          },
+          {
+            "@class": "",
+            "#text": "1.4287"
+          },
+          {
+            "@class": "",
+            "#text": "0.5394"
+          },
+          {
+            "@class": "",
+            "#text": "0.8283"
+          },
+          {
+            "@class": "",
+            "#text": "0.5398"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-03-31",
+              "Last tested 2023-07-05"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "a": {
+                "@href": "http://www.vision.caltech.edu/~harel/share/gbvs.php",
+                "#text": "Graph-Based Visual Saliency (GBVS)"
+              }
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://www.klab.caltech.edu/~harel/share/gbvs.php",
+                "#text": "Graph-Based Visual Saliency [NIPS 2006]"
+              },
+              "#text": "Jonathan Harel, Christof Koch, Pietro Perona."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://www.vision.caltech.edu/~harel/share/gbvs.zip",
+                "#text": "matlab"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.7979"
+          },
+          {
+            "@class": "",
+            "#text": "0.5863"
+          },
+          {
+            "@class": "",
+            "#text": "1.2342"
+          },
+          {
+            "@class": "",
+            "#text": "0.4919"
+          },
+          {
+            "@class": "",
+            "#text": "0.8262"
+          },
+          {
+            "@class": "",
+            "#text": "0.5115"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-04-01",
+              "Last tested 2023-07-06"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": "IttiKoch2"
+          },
+          {
+            "p": "Implementation by Jonathan Harel (part of GBVS toolbox)"
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://www.vision.caltech.edu/~harel/share/gbvs.php",
+                "#text": "matlab"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.7916"
+          },
+          {
+            "@class": "",
+            "#text": "0.5954"
+          },
+          {
+            "@class": "",
+            "#text": "1.1945"
+          },
+          {
+            "@class": "",
+            "#text": "0.4772"
+          },
+          {
+            "@class": "",
+            "#text": "0.8342"
+          },
+          {
+            "@class": "",
+            "#text": "0.5030"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-04-01",
+              "Last tested 2023-07-06"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": "ML-Net"
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://arxiv.org/abs/1609.01064",
+                "#text": "A Deep Multi-Level Network for Saliency Prediction [ICPR 2016]"
+              },
+              "#text": "Marcella Cornia, Lorenzo Baraldi, Giuseppe Serra, Rita Cucchiara."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://github.com/marcellacornia/mlnet",
+                "#text": "python"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.7852"
+          },
+          {
+            "@class": "",
+            "#text": "0.6318"
+          },
+          {
+            "@class": "",
+            "#text": "1.3280"
+          },
+          {
+            "@class": "",
+            "#text": "0.4964"
+          },
+          {
+            "@class": "",
+            "#text": "0.9369"
+          },
+          {
+            "@class": "",
+            "#text": "0.5258"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-04-01",
+              "Last tested 2023-07-06"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "a": {
+                "@href": "http://cs-people.bu.edu/jmzhang/BMS/BMS.html",
+                "#text": "Boolean Map based Saliency (BMS)"
+              }
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://cs-people.bu.edu/jmzhang/BMS/BMS_iccv13_preprint.pdf",
+                "#text": "Saliency detection: a boolean map approach [ICCV 2013]"
+              },
+              "#text": "Jianming Zhang, Stan Sclaroff."
+            }
+          },
+          {
+            "p": {
+              "a": [
+                {
+                  "@href": "http://cs-people.bu.edu/jmzhang/BMS/down_bms_mex.php?Down=BMS-mex.zip",
+                  "#text": "matlab"
+                },
+                {
+                  "@href": "http://cs-people.bu.edu/jmzhang/BMS/down_bms.php?Down=BMS.zip",
+                  "#text": "executable"
+                }
+              ],
+              "#text": ","
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.7826"
+          },
+          {
+            "@class": "",
+            "#text": "0.6267"
+          },
+          {
+            "@class": "",
+            "#text": "1.1879"
+          },
+          {
+            "@class": "",
+            "#text": "0.4562"
+          },
+          {
+            "@class": "",
+            "#text": "1.0294"
+          },
+          {
+            "@class": "",
+            "#text": "0.5106"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-03-31",
+              "Last tested 2023-07-05"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "a": {
+                "@href": "http://webee.technion.ac.il/labs/cgm/Computer-Graphics-Multimedia/Software/Saliency/Saliency.html",
+                "#text": "Context-Aware Saliency"
+              }
+            }
+          },
+          {
+            "p": {
+              "a": [
+                {
+                  "@href": "http://webee.technion.ac.il/~ayellet/Ps/10-Saliency.pdf",
+                  "#text": "[CVPR 2010]"
+                },
+                {
+                  "@href": "http://webee.technion.ac.il/~lihi/Publications/12-PAMI-ContextAwareSaliency.pdf",
+                  "#text": "[PAMI 2012]"
+                }
+              ],
+              "#text": "Stas Goferman, Lihi Zelnik-Manor, Ayellet Tal. Context-Aware Saliency Detection"
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://webee.technion.ac.il/labs/cgm/Computer-Graphics-Multimedia/Software/Saliency/Saliency.zip",
+                "#text": "matlab"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.7775"
+          },
+          {
+            "@class": "",
+            "#text": "0.5939"
+          },
+          {
+            "@class": "",
+            "#text": "1.0901"
+          },
+          {
+            "@class": "",
+            "#text": "0.4340"
+          },
+          {
+            "@class": "",
+            "#text": "0.9240"
+          },
+          {
+            "@class": "",
+            "#text": "0.4889"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-03-31",
+              "Last tested 2023-07-05"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": "Image Signature"
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://www.klab.caltech.edu/~xhou/papers/pami11.pdf",
+                "#text": "Image Signature: Highlighting Sparse Salient Regions [PAMI 2011]"
+              },
+              "#text": "Xiaodi Hou, Jonathan Harel, Christof Koch."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://www.vision.caltech.edu/~harel/share/signatureSal.zip",
+                "#text": "matlab"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.7704"
+          },
+          {
+            "@class": "",
+            "#text": "0.6082"
+          },
+          {
+            "@class": "",
+            "#text": "1.0864"
+          },
+          {
+            "@class": "",
+            "#text": "0.4320"
+          },
+          {
+            "@class": "",
+            "#text": "0.9095"
+          },
+          {
+            "@class": "",
+            "#text": "0.4812"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-04-01",
+              "Last tested 2023-07-06"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "a": {
+                "@href": "http://www.tcts.fpms.ac.be/attention/?categorie16/what-and-why",
+                "#text": "RARE2012"
+              }
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://www.sciencedirect.com/science/article/pii/S0923596513000489",
+                "#text": "RARE2012: A multi-scale rarity-based saliency detection with its comparative statistical analysis [Signal Processing: Image Communication, 2013]"
+              },
+              "#text": "Nicolas Riche, Matei Mancas, Matthieu Duvinage, Makiese Mibulumukini, Bernard Gosselin, Thierry Dutoit."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://www.tcts.fpms.ac.be/attention/?categorie17/rare2012",
+                "#text": "matlab"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.7689"
+          },
+          {
+            "@class": "",
+            "#text": "0.6108"
+          },
+          {
+            "@class": "",
+            "#text": "1.0960"
+          },
+          {
+            "@class": "",
+            "#text": "0.4302"
+          },
+          {
+            "@class": "",
+            "#text": "0.9584"
+          },
+          {
+            "@class": "",
+            "#text": "0.4880"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-04-01",
+              "Last tested 2023-07-06"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": "Dynamic Visual Attention (DVA)"
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://papers.nips.cc/paper/3531-dynamic-visual-attention-searching-for-coding-length-increments",
+                "#text": "Dynamic visual attention: Searching for coding length increments NIPS 2008"
+              },
+              "#text": "Hou, Xiaodi, and Liqing Zhang."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://github.com/TsotsosLab/SMILER/tree/master/models/matlab/DVA",
+                "#text": "matlab"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.7664"
+          },
+          {
+            "@class": "",
+            "#text": "0.6089"
+          },
+          {
+            "@class": "",
+            "#text": "1.0686"
+          },
+          {
+            "@class": "",
+            "#text": "0.4120"
+          },
+          {
+            "@class": "",
+            "#text": "1.1251"
+          },
+          {
+            "@class": "",
+            "#text": "0.4889"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-03-31",
+              "Last tested 2023-07-05"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": "OpenSALICON"
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://arxiv.org/abs/1606.00110",
+                "#text": "OpenSalicon: An Open Source Implementation of the Salicon Saliency Model [arXiv 2016]"
+              },
+              "#text": "Christopher Lee Thomas."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://github.com/CLT29/OpenSALICON",
+                "#text": "python (caffe)"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.7627"
+          },
+          {
+            "@class": "",
+            "#text": "0.6341"
+          },
+          {
+            "@class": "",
+            "#text": "1.1985"
+          },
+          {
+            "@class": "",
+            "#text": "0.4400"
+          },
+          {
+            "@class": "",
+            "#text": "1.0007"
+          },
+          {
+            "@class": "",
+            "#text": "0.5032"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-04-01",
+              "Last tested 2023-07-07"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": "AIM"
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://www.journalofvision.org/content/7/9/950",
+                "#text": "Attention based on information maximization [JoV 2007]"
+              },
+              "#text": "Neil Bruce, John Tsotsos."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://www-sop.inria.fr/members/Neil.Bruce/AIM.zip",
+                "#text": "matlab"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.7547"
+          },
+          {
+            "@class": "",
+            "#text": "0.6092"
+          },
+          {
+            "@class": "",
+            "#text": "0.9680"
+          },
+          {
+            "@class": "",
+            "#text": "0.3819"
+          },
+          {
+            "@class": "",
+            "#text": "1.1924"
+          },
+          {
+            "@class": "",
+            "#text": "0.4564"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": [
+                "maps from code via",
+                ". Params: resize=0.5, thebasis='31infomax975'"
+              ]
+            },
+            "#text": [
+              "First tested 2021-04-07",
+              "Last tested 2023-07-05"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": "Quaternion-Based Spectral Saliency (QSS)"
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://link.springer.com/chapter/10.1007/978-3-642-33709-3_9",
+                "#text": "Quaternion-based Spectral Saliency Detection for Eye Fixation Prediction [ECCV 2012]"
+              },
+              "#text": "B. Schauerte, R. Stiefelhagen."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://www.mathworks.de/matlabcentral/fileexchange/32455-spectral-phase-based-visual-saliency",
+                "#text": "matlab"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.7510"
+          },
+          {
+            "@class": "",
+            "#text": "0.6132"
+          },
+          {
+            "@class": "",
+            "#text": "0.8368"
+          },
+          {
+            "@class": "",
+            "#text": "0.3318"
+          },
+          {
+            "@class": "",
+            "#text": "1.0189"
+          },
+          {
+            "@class": "",
+            "#text": "0.4564"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-04-01",
+              "Last tested 2023-07-06"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": "Saliency Detection by Self-Resemblance (SSR)"
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "https://ieeexplore.ieee.org/document/5204207",
+                "#text": "Nonparametric Bottom-Up Saliency Detection by Self-Resemblance [CVPR 2009]"
+              },
+              "#text": [
+                "Hae Jong Seo, Peyman Milanfar",
+                "."
+              ]
+            }
+          },
+          "",
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.7209"
+          },
+          {
+            "@class": "",
+            "#text": "0.5943"
+          },
+          {
+            "@class": "",
+            "#text": "0.8543"
+          },
+          {
+            "@class": "",
+            "#text": "0.3370"
+          },
+          {
+            "@class": "",
+            "#text": "1.5695"
+          },
+          {
+            "@class": "",
+            "#text": "0.4540"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": "maps from"
+            },
+            "#text": [
+              "First tested 2021-04-01",
+              "Last tested 2023-07-07"
+            ]
+          }
+        ]
+      },
+      {
+        "@role": "row",
+        "#comment": [
+          "",
+          ""
+        ],
+        "td": [
+          {
+            "p": {
+              "a": {
+                "@href": "http://cseweb.ucsd.edu/~l6zhang/",
+                "#text": "http://cseweb.ucsd.edu/~l6zhang/"
+              }
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://journalofvision.org/8/7/32/",
+                "#text": "SUN: A Bayesian framework for saliency using natural statistics [JoV 2008]"
+              },
+              "#text": "Lingyun Zhang, Matthew H. Tong, Tim K. Marks, Honghao Shan, Garrison W. Cottrell."
+            }
+          },
+          {
+            "p": {
+              "a": {
+                "@href": "http://cseweb.ucsd.edu/~l6zhang/code/imagesaliency.zip",
+                "#text": "matlab"
+              }
+            }
+          },
+          {
+            "@class": ""
+          },
+          {
+            "@class": "",
+            "#text": "0.7128"
+          },
+          {
+            "@class": "",
+            "#text": "0.5815"
+          },
+          {
+            "@class": "",
+            "#text": "0.8127"
+          },
+          {
+            "@class": "",
+            "#text": "0.3164"
+          },
+          {
+            "@class": "",
+            "#text": "2.2040"
+          },
+          {
+            "@class": "",
+            "#text": "0.4391"
+          },
+          {
+            "br": [
+              "",
+              ""
+            ],
+            "p": {
+              "a": {
+                "@href": "https://github.com/tsotsoslab/smiler",
+                "#text": "SMILER"
+              },
+              "#text": [
+                "maps from code via",
+                ". Params: rescale=0.5"
+              ]
+            },
+            "#text": [
+              "First tested 2021-04-07",
+              "Last tested 2023-07-07"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

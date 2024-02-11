@@ -3,11 +3,17 @@ import 'dart:io';
 import 'dart:math';
 
 import 'package:num_remap/num_remap.dart';
+import 'package:saliency_mit300/metric.dart';
 import 'package:saliency_mit300/model_results.dart';
 import 'package:saliency_mit300/task.dart';
+import 'package:saliency_mit300/util.dart';
 import 'package:sprintf/sprintf.dart';
 
 Future<dynamic> _readJsonFile(String filePath) async {
+  if (!File(filePath).existsSync()) {
+    return null;
+  }
+
   var input = await File(filePath).readAsString();
   var map = jsonDecode(input);
   return map;
@@ -18,35 +24,49 @@ String _findNumberInJson(dynamic json) {
   return number?.group(0) ?? '--';
 }
 
-ModelResults? _modelResultsFromJson(Map<String, dynamic> json) {
+String _getNumberForMetric(dynamic json, Metric metric, String dataSource) {
+  final index = metricToIndex(metric, dataSource);
+
+  if (index == null) {
+    return '--';
+  }
+
+  return _findNumberInJson(json[index]);
+}
+
+ModelResults? _modelResultsFromJson(
+    Map<String, dynamic> json, String dataSource) {
   final td = json['td'];
 
   if (td == null) {
     return null;
   }
 
-  if (td!.length < 12) {
+  if (td!.length < 11) {
     return null;
   }
 
   return ModelResults(
     modelName: td[0].toString(),
     published: td[1].toString(),
-    aucJudd: _findNumberInJson(td[3]),
-    sim: _findNumberInJson(td[4]),
-    emd: _findNumberInJson(td[5]),
-    aucBorji: _findNumberInJson(td[6]),
-    sAUC: _findNumberInJson(td[7]),
-    cc: _findNumberInJson(td[8]),
-    nss: _findNumberInJson(td[9]),
-    kl: _findNumberInJson(td[10]),
+    aucJudd: _getNumberForMetric(td, Metric.aucJudd, dataSource),
+    sim: _getNumberForMetric(td, Metric.sim, dataSource),
+    emd: _getNumberForMetric(td, Metric.emd, dataSource),
+    aucBorji: _getNumberForMetric(td, Metric.aucBorji, dataSource),
+    sAUC: _getNumberForMetric(td, Metric.sAUC, dataSource),
+    cc: _getNumberForMetric(td, Metric.cc, dataSource),
+    nss: _getNumberForMetric(td, Metric.nss, dataSource),
+    kl: _getNumberForMetric(td, Metric.kl, dataSource),
+    ig: _getNumberForMetric(td, Metric.ig, dataSource),
     json: td,
+    dataSource: dataSource,
   );
 }
 
-List<ModelResults> _modelResultsFromJsonList(List<dynamic> jsonList) {
+List<ModelResults> _modelResultsFromJsonList(
+    List<dynamic> jsonList, String dataSource) {
   return jsonList
-      .map((e) => _modelResultsFromJson(e))
+      .map((e) => _modelResultsFromJson(e, dataSource))
       .where((element) => element != null)
       .map((e) => e!)
       .toList();
@@ -103,6 +123,14 @@ bool _isModelInQueryList(
   return queryList.any((element) => _isModel(element.query, modelResults));
 }
 
+String _getPointColor(bool isModelSelected, String dataSource) {
+  if (dataSource == 'mit') {
+    return isModelSelected ? 'black' : 'black!30';
+  }
+
+  return isModelSelected ? 'SteelBlue' : 'SteelBlue!30';
+}
+
 String _generatePerformancePlot(
     List<ModelResults> modelResults, List<_ModelNameQuery> selectedModels) {
   var elementsString = '';
@@ -134,11 +162,11 @@ String _generatePerformancePlot(
     final y = double.parse(model.nss)
         .remap(worstPerformance, bestPerformance, yMin, yMax);
 
-    final name = model.readableName;
+    final name = model.readableName.sanitize();
 
     final isModelSelected = _isModelInQueryList(model, selectedModels);
 
-    final color = isModelSelected ? 'black' : 'gray';
+    final color = _getPointColor(isModelSelected, model.dataSource);
     final fontSize = isModelSelected ? 'small' : 'tiny';
     final nodeSize = isModelSelected ? '2pt' : '1.75pt';
 
@@ -173,26 +201,41 @@ String _generatePerformancePlot(
       '\\end{tikzpicture}\n'
       '\\label{fig:mit300_nss_perf_plot}\n'
       '\\caption{Performance of various saliency map prediction models, measured by their NSS score. '
-      'Performance measurements are taken from \\cite{mit-saliency-benchmark}. '
-      'Models drawn in black are present in Table~\\ref{tab:mit300_perf}. '
-      'Only models whose release date is present in \\cite{mit-saliency-benchmark} are included. '
+      'Performance measurements are taken from \\cite{mit-saliency-benchmark, mit-tuebingen-saliency-benchmark} '
+      'and are colored in \\textcolor{black}{black} or \\textcolor{SteelBlue}{blue}, respectively. '
+      'Models drawn with a dark color are present in Table~\\ref{tab:mit300_perf}. '
+      'Only models whose release date is present in \\cite{mit-saliency-benchmark, mit-tuebingen-saliency-benchmark} '
+      'are included. '
       'The code that was used to generate this figure is available at: \\url{'
       'https://github.com/Adrian-Samoticha/mit_saliency_benchmark_extractor}}\n'
       '\\end{figure}\n';
 }
 
-List<ModelResults> _getModelResultsFromJson(dynamic json) {
+List<ModelResults> _getModelResultsFromJson(dynamic json, String dataSource) {
+  if (json == null) {
+    return const [];
+  }
+
   final tbody = json['tbody'];
   final tr = tbody['tr'];
 
-  return _modelResultsFromJsonList(tr);
+  return _modelResultsFromJsonList(tr, dataSource);
 }
 
 Future<void> _printLatexTableColumnLinesForDataset(
     String dataset, Task task) async {
   final mitJson = await _readJsonFile('./data/${dataset}_results.json');
+  final tuebingenJson =
+      await _readJsonFile('./data/${dataset}_results_tuebingen.json');
 
-  final modelResults = _getModelResultsFromJson(mitJson);
+  final mitModelResults = _getModelResultsFromJson(mitJson, 'mit');
+  final tuebingenModelResults =
+      _getModelResultsFromJson(tuebingenJson, 'tuebingen');
+
+  final modelResults = [
+    ...mitModelResults,
+    ...tuebingenModelResults,
+  ];
 
   const selectedModels = [
     _ModelNameQuery("SAM-ResNet", "SAM-ResNet \\cite{8400593}"),

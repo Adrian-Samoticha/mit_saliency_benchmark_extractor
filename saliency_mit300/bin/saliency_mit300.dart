@@ -138,12 +138,12 @@ String _generatePerformancePlot(
 
   // sort model results by release year
   final sortedModelResults = modelResults
-      .where((e) => e.releaseDate != null)
+      .where((e) => e.releaseYear != null)
       .toList()
-    ..sort((a, b) => a.releaseDate!.compareTo(b.releaseDate!));
+    ..sort((a, b) => a.releaseYear!.compareTo(b.releaseYear!));
 
-  final earliestReleaseDate = int.parse(sortedModelResults.first.releaseDate!);
-  final latestReleaseDate = int.parse(sortedModelResults.last.releaseDate!);
+  final earliestReleaseDate = int.parse(sortedModelResults.first.releaseYear!);
+  final latestReleaseDate = int.parse(sortedModelResults.last.releaseYear!);
 
   const xMin = 0.0;
   const xMax = 12.0;
@@ -157,7 +157,7 @@ String _generatePerformancePlot(
   const yMax = 15.0;
 
   for (var model in sortedModelResults) {
-    final releaseDate = int.parse(model.releaseDate!);
+    final releaseDate = int.parse(model.releaseYear!);
     final x =
         releaseDate.remap(earliestReleaseDate, latestReleaseDate, xMin, xMax);
     final y = double.parse(model.nss)

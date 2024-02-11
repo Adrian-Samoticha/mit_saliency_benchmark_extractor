@@ -32,7 +32,7 @@ class ModelResults {
   String toString() {
     return 'ModelResults(readableName: $readableName, $published, aucJudd: '
         '$aucJudd, sim: $sim, emd: $emd, aucBorji: $aucBorji, sAUC: $sAUC, cc: '
-        '$cc, nss: $nss, kl: $kl, ig: $ig, releaseDate: $releaseDate, '
+        '$cc, nss: $nss, kl: $kl, ig: $ig, releaseDate: $releaseYear, '
         'dataSource: $dataSource)';
   }
 
@@ -63,7 +63,7 @@ class ModelResults {
     return result;
   }
 
-  String? get releaseDate {
+  String? get releaseYear {
     final publishedWithoutUrls = published.replaceAll(
         RegExp(
             r'https?://(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)'),

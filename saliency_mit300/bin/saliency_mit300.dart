@@ -181,14 +181,18 @@ String _generatePerformancePlot(
       '\\end{figure}\n';
 }
 
-Future<void> _printLatexTableColumnLinesForDataset(
-    String dataset, Task task) async {
-  final mit300Json = await _readJsonFile('./data/${dataset}_results.json');
-
-  final tbody = mit300Json['tbody'];
+List<ModelResults> _getModelResultsFromJson(dynamic json) {
+  final tbody = json['tbody'];
   final tr = tbody['tr'];
 
-  final modelResults = _modelResultsFromJsonList(tr);
+  return _modelResultsFromJsonList(tr);
+}
+
+Future<void> _printLatexTableColumnLinesForDataset(
+    String dataset, Task task) async {
+  final mitJson = await _readJsonFile('./data/${dataset}_results.json');
+
+  final modelResults = _getModelResultsFromJson(mitJson);
 
   const selectedModels = [
     _ModelNameQuery("SAM-ResNet", "SAM-ResNet \\cite{8400593}"),

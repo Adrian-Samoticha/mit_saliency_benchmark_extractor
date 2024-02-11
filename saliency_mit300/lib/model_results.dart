@@ -63,7 +63,14 @@ class ModelResults {
     return result;
   }
 
-  String? get releaseDate => _findYearInString(published);
+  String? get releaseDate {
+    final publishedWithoutUrls = published.replaceAll(
+        RegExp(
+            r'https?://(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)'),
+        '');
+
+    return _findYearInString(publishedWithoutUrls);
+  }
 
   String? _getReadableNameFromNameJson(dynamic nameJson) {
     if (nameJson is String && nameJson.length < 64) {

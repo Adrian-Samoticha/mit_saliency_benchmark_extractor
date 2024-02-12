@@ -161,8 +161,8 @@ String _getPointColor(bool isModelSelected, String dataSource) {
   return isModelSelected ? 'SteelBlue' : 'SteelBlue!30';
 }
 
-String _generatePerformancePlot(
-    List<ModelResults> modelResults, List<_ModelNameQuery> selectedModels) {
+String _generatePerformancePlot(List<ModelResults> modelResults,
+    List<_ModelNameQuery> selectedModels, String dataset) {
   var backgroundElementsString = '';
   var foregroundElementsString = '';
 
@@ -238,7 +238,8 @@ String _generatePerformancePlot(
       '$foregroundElementsString'
       '\\end{tikzpicture}\n'
       '\\label{fig:mit300_nss_perf_plot}\n'
-      '\\caption{Performance of various saliency map prediction models, measured by their NSS score. '
+      '\\caption{Performance of various saliency map prediction models, measured by the NSS score each model achieved '
+      'on the ${dataset.toUpperCase()} dataset. '
       'Performance measurements are taken from \\cite{mit-saliency-benchmark, mit-tuebingen-saliency-benchmark} '
       'and are colored in \\textcolor{black}{black} or \\textcolor{SteelBlue}{blue}, respectively. '
       'Models drawn with a dark color are present in Table~\\ref{tab:mit300_perf}. '
@@ -321,7 +322,8 @@ Future<void> _printLatexTableRowLinesForDataset(
       }
 
     case Task.generatePerformancePlot:
-      final plot = _generatePerformancePlot(modelResults, selectedModels);
+      final plot =
+          _generatePerformancePlot(modelResults, selectedModels, dataset);
       print(plot);
   }
 }

@@ -110,8 +110,21 @@ ModelResults? _findModelResultsFromQuery(
       .firstWhere((element) => query.matches(element!), orElse: () => null);
 }
 
+String _changeStringFloatPrecision(String input, int precision) {
+  final number = double.tryParse(input);
+
+  if (number == null) {
+    return input.padRight(precision + 2);
+  }
+
+  return sprintf('%.${precision}f', [number]);
+}
+
 String _getMetricStringForTableRow(ModelResults modelResults) {
-  return Metric.values.map((e) => modelResults.getMetric(e)).join(' & ');
+  return Metric.values.map((e) {
+    final raw = modelResults.getMetric(e);
+    return _changeStringFloatPrecision(raw, 2);
+  }).join(' & ');
 }
 
 String _generateLaTeXTableRowLineForModelNameQuery(

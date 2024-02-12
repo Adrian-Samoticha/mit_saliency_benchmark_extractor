@@ -76,16 +76,24 @@ String _sanitizeString(String input) {
   return input.trim().replaceAll(RegExp(r'\s+'), '').toLowerCase();
 }
 
-bool _isModel(String name, ModelResults modelResults) {
-  final sanitizedString = _sanitizeString(name);
-  return _sanitizeString(modelResults.modelName).contains(sanitizedString);
-}
-
 class _ModelNameQuery {
-  final String query;
+  final List<String> queries;
   final String displayName;
 
-  const _ModelNameQuery(this.query, this.displayName);
+  const _ModelNameQuery(this.queries, this.displayName);
+
+  bool matches(ModelResults modelResults) {
+    for (var query in queries) {
+      final sanitizedQuery = _sanitizeString(query);
+      final sanitizedModelName = _sanitizeString(modelResults.modelName);
+
+      if (sanitizedModelName.contains(sanitizedQuery)) {
+        return true;
+      }
+    }
+
+    return false;
+  }
 }
 
 String rightPad(String input, int length) {
@@ -97,9 +105,9 @@ String rightPad(String input, int length) {
 
 ModelResults? _findModelResultsFromQuery(
     _ModelNameQuery query, List<ModelResults> modelResults) {
-  return modelResults.map<ModelResults?>((e) => e).firstWhere(
-      (element) => _isModel(query.query, element!),
-      orElse: () => null);
+  return modelResults
+      .map<ModelResults?>((e) => e)
+      .firstWhere((element) => query.matches(element!), orElse: () => null);
 }
 
 String _generateLaTeXTableColumnLineForModelNameQuery(
@@ -120,7 +128,7 @@ String _generateLaTeXTableColumnLineForModelNameQuery(
 
 bool _isModelInQueryList(
     ModelResults modelResults, List<_ModelNameQuery> queryList) {
-  return queryList.any((element) => _isModel(element.query, modelResults));
+  return queryList.any((element) => element.matches(modelResults));
 }
 
 String _getPointColor(bool isModelSelected, String dataSource) {
@@ -246,23 +254,35 @@ Future<void> _printLatexTableColumnLinesForDataset(
   ];
 
   const selectedModels = [
-    _ModelNameQuery("SAM-ResNet", "SAM-ResNet \\cite{8400593}"),
-    _ModelNameQuery("SAM-VGG", "SAM-VGG \\cite{8400593}"),
-    _ModelNameQuery("PDP", "PDP \\cite{jetley2018endtoend}"),
-    _ModelNameQuery("DeepFix", "DeepFix \\cite{7937829}"),
-    _ModelNameQuery("SalGAN", "SalGAN \\cite{Pan_2017_SalGAN}"),
-    _ModelNameQuery("SalNet", "Pan (deep) \\cite{7780440}"),
-    _ModelNameQuery("JuntingNet", "Pan (shallow) \\cite{7780440}"),
-    _ModelNameQuery("Mr-CNN", "Mr-CNN \\cite{7298633}"),
-    _ModelNameQuery("SALICON", "SALICON \\cite{7410395}"),
-    _ModelNameQuery("Deep Gaze 2", "Deep Gaze~II \\cite{kümmerer2015deep}"),
-    _ModelNameQuery("Deep Gaze 1", "Deep Gaze~I \\cite{kümmerer2015deep}"),
-    _ModelNameQuery("eDN", "eDN \\cite{6909754}"),
-    _ModelNameQuery("BMS", "BMS \\cite{6751128}"),
-    _ModelNameQuery("Judd Model", "Judd \\cite{5459462}"),
-    _ModelNameQuery("Hou \\& Zhang", "Hou \\& Zhang \\cite{4270292}"),
-    _ModelNameQuery("GBVS", "GBVS \\cite{NIPS2006_4db0f8b0}"),
-    _ModelNameQuery("Itti", "Itti et al. \\cite{730558}"),
+    _ModelNameQuery(["SAM-ResNet"], "SAM-ResNet \\cite{8400593}"),
+    _ModelNameQuery(["SAM-VGG"], "SAM-VGG \\cite{8400593}"),
+    _ModelNameQuery(["PDP"], "PDP \\cite{jetley2018endtoend}"),
+    _ModelNameQuery(["DeepFix"], "DeepFix \\cite{7937829}"),
+    _ModelNameQuery(["SalGAN"], "SalGAN \\cite{Pan_2017_SalGAN}"),
+    _ModelNameQuery(["SalNet"], "Pan (deep) \\cite{7780440}"),
+    _ModelNameQuery(["JuntingNet"], "Pan (shallow) \\cite{7780440}"),
+    _ModelNameQuery(["Mr-CNN"], "Mr-CNN \\cite{7298633}"),
+    _ModelNameQuery(["SALICON"], "SALICON \\cite{7410395}"),
+    _ModelNameQuery(
+      [
+        "Deep Gaze 2",
+        "DeepGaze II",
+      ],
+      "Deep Gaze~II \\cite{kümmerer2015deep}",
+    ),
+    _ModelNameQuery(
+      [
+        "Deep Gaze 1",
+        "DeepGaze I",
+      ],
+      "Deep Gaze~I \\cite{kümmerer2015deep}",
+    ),
+    _ModelNameQuery(["eDN"], "eDN \\cite{6909754}"),
+    _ModelNameQuery(["BMS"], "BMS \\cite{6751128}"),
+    _ModelNameQuery(["Judd Model"], "Judd \\cite{5459462}"),
+    _ModelNameQuery(["Hou \\& Zhang"], "Hou \\& Zhang \\cite{4270292}"),
+    _ModelNameQuery(["GBVS"], "GBVS \\cite{NIPS2006_4db0f8b0}"),
+    _ModelNameQuery(["Itti"], "Itti et al. \\cite{730558}"),
   ];
 
   switch (task) {

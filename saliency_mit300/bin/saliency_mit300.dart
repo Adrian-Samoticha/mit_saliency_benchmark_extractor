@@ -121,7 +121,18 @@ String _changeStringFloatPrecision(String input, int precision) {
 }
 
 String _getMetricStringForTableRow(ModelResults modelResults) {
-  return Metric.values.map((e) {
+  const metrics = [
+    Metric.aucJudd,
+    Metric.sim,
+    Metric.emd,
+    Metric.aucBorji,
+    Metric.sAUC,
+    Metric.cc,
+    Metric.nss,
+    Metric.kl,
+  ];
+
+  return metrics.map((e) {
     final raw = modelResults.getMetric(e);
     return _changeStringFloatPrecision(raw, 2);
   }).join(' & ');

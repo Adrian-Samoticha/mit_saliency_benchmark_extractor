@@ -96,13 +96,6 @@ class _ModelNameQuery {
   }
 }
 
-String rightPad(String input, int length) {
-  if (input.length >= length) {
-    return input;
-  }
-  return input + ' ' * (length - input.length);
-}
-
 ModelResults? _findModelResultsFromQuery(
     _ModelNameQuery query, List<ModelResults> modelResults) {
   return modelResults
@@ -147,7 +140,7 @@ String _generateLaTeXTableRowLineForModelNameQuery(
     return "% “${query.displayName}” missing";
   }
 
-  final paddedDisplayName = rightPad(query.displayName, nameLength);
+  final paddedDisplayName = query.displayName.padRight(nameLength);
 
   return '$paddedDisplayName & ${_getMetricStringForTableRow(modelResultsForQuery)} \\\\';
 }

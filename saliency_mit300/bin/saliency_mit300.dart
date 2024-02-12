@@ -257,6 +257,7 @@ Future<void> _printLatexTableColumnLinesForDataset(
     _ModelNameQuery(["SAM-ResNet"], "SAM-ResNet \\cite{8400593}"),
     _ModelNameQuery(["SAM-VGG"], "SAM-VGG \\cite{8400593}"),
     _ModelNameQuery(["PDP"], "PDP \\cite{jetley2018endtoend}"),
+    _ModelNameQuery(["ML-Net"], "ML-Net \\cite{Cornia2016ADM}"),
     _ModelNameQuery(["DeepFix"], "DeepFix \\cite{7937829}"),
     _ModelNameQuery(["SalGAN"], "SalGAN \\cite{Pan_2017_SalGAN}"),
     _ModelNameQuery(["SalNet"], "Pan (deep) \\cite{7780440}"),

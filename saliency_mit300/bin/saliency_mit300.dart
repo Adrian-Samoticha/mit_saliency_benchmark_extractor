@@ -110,7 +110,7 @@ ModelResults? _findModelResultsFromQuery(
       .firstWhere((element) => query.matches(element!), orElse: () => null);
 }
 
-String _generateLaTeXTableColumnLineForModelNameQuery(
+String _generateLaTeXTableRowLineForModelNameQuery(
     _ModelNameQuery query, List<ModelResults> modelResults,
     {int nameLength = 0}) {
   final modelResultsForQuery = _findModelResultsFromQuery(query, modelResults);
@@ -238,7 +238,7 @@ List<ModelResults> _getModelResultsFromJson(dynamic json, String dataSource) {
   return _modelResultsFromJsonList(tr, dataSource);
 }
 
-Future<void> _printLatexTableColumnLinesForDataset(
+Future<void> _printLatexTableRowLinesForDataset(
     String dataset, Task task) async {
   final mitJson = await _readJsonFile('./data/${dataset}_results.json');
   final tuebingenJson =
@@ -292,7 +292,7 @@ Future<void> _printLatexTableColumnLinesForDataset(
           selectedModels.map((e) => e.displayName.length).reduce(max);
 
       for (var model in selectedModels) {
-        final latexLine = _generateLaTeXTableColumnLineForModelNameQuery(
+        final latexLine = _generateLaTeXTableRowLineForModelNameQuery(
             model, modelResults,
             nameLength: longestDisplayName);
         print(latexLine);
@@ -309,5 +309,5 @@ void main(List<String> arguments) {
   final task =
       Task.values.firstWhere((element) => element.name == arguments[1]);
 
-  _printLatexTableColumnLinesForDataset(dataset, task);
+  _printLatexTableRowLinesForDataset(dataset, task);
 }

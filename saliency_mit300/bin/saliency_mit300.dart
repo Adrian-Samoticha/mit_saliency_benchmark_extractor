@@ -110,6 +110,10 @@ ModelResults? _findModelResultsFromQuery(
       .firstWhere((element) => query.matches(element!), orElse: () => null);
 }
 
+String _getMetricStringForTableRow(ModelResults modelResults) {
+  return Metric.values.map((e) => modelResults.getMetric(e)).join(' & ');
+}
+
 String _generateLaTeXTableRowLineForModelNameQuery(
     _ModelNameQuery query, List<ModelResults> modelResults,
     {int nameLength = 0}) {
@@ -121,9 +125,7 @@ String _generateLaTeXTableRowLineForModelNameQuery(
 
   final paddedDisplayName = rightPad(query.displayName, nameLength);
 
-  return '$paddedDisplayName & ${modelResultsForQuery.aucJudd} & ${modelResultsForQuery.sim} & '
-      '${modelResultsForQuery.emd} & ${modelResultsForQuery.aucBorji} & ${modelResultsForQuery.sAUC} & '
-      '${modelResultsForQuery.cc} & ${modelResultsForQuery.nss} & ${modelResultsForQuery.kl} \\\\';
+  return '$paddedDisplayName & ${_getMetricStringForTableRow(modelResultsForQuery)} \\\\';
 }
 
 bool _isModelInQueryList(

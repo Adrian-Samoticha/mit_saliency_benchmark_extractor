@@ -1,3 +1,5 @@
+import 'metric.dart';
+
 class ModelResults {
   final String modelName;
   final String published;
@@ -34,6 +36,29 @@ class ModelResults {
         '$aucJudd, sim: $sim, emd: $emd, aucBorji: $aucBorji, sAUC: $sAUC, cc: '
         '$cc, nss: $nss, kl: $kl, ig: $ig, releaseDate: $releaseYear, '
         'dataSource: $dataSource)';
+  }
+
+  String getMetric(Metric metric) {
+    switch (metric) {
+      case Metric.aucJudd:
+        return aucJudd;
+      case Metric.sim:
+        return sim;
+      case Metric.emd:
+        return emd;
+      case Metric.aucBorji:
+        return aucBorji;
+      case Metric.sAUC:
+        return sAUC;
+      case Metric.cc:
+        return cc;
+      case Metric.nss:
+        return nss;
+      case Metric.kl:
+        return kl;
+      case Metric.ig:
+        return ig;
+    }
   }
 
   String? _findYearInString(String input) {

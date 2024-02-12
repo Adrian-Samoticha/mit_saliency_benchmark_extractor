@@ -87,7 +87,10 @@ class _ModelNameQuery {
       final sanitizedQuery = _sanitizeString(query);
       final sanitizedModelName = _sanitizeString(modelResults.modelName);
 
-      if (sanitizedModelName.contains(sanitizedQuery)) {
+      final hasMatch =
+          RegExp('(?<!\\w)$sanitizedQuery(?!\\w)').hasMatch(sanitizedModelName);
+
+      if (hasMatch) {
         return true;
       }
     }
@@ -302,7 +305,7 @@ Future<void> _printLatexTableRowLinesForDataset(
     _ModelNameQuery(["Judd Model"], "Judd \\cite{5459462}"),
     _ModelNameQuery(["Hou \\& Zhang"], "Hou \\& Zhang \\cite{4270292}"),
     _ModelNameQuery(["GBVS"], "GBVS \\cite{NIPS2006_4db0f8b0}"),
-    _ModelNameQuery(["Itti"], "Itti et al. \\cite{730558}"),
+    _ModelNameQuery(["IttiKoch"], "Itti et al. \\cite{730558}"),
   ];
 
   switch (task) {

@@ -278,6 +278,7 @@ Future<void> _printLatexTableRowLinesForDataset(
   ];
 
   const selectedModels = [
+    _ModelNameQuery(["EML-Net"], "EML-Net \\cite{jia2019emlnetan}"),
     _ModelNameQuery(["SAM-ResNet"], "SAM-ResNet \\cite{8400593}"),
     _ModelNameQuery(["SAM-VGG"], "SAM-VGG \\cite{8400593}"),
     _ModelNameQuery(["PDP"], "PDP \\cite{jetley2018endtoend}"),

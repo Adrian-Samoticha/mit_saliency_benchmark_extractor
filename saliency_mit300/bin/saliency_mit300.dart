@@ -145,7 +145,8 @@ String _generateLaTeXTableRowLineForModelNameQuery(
 
   final paddedDisplayName = query.displayName.padRight(nameLength);
 
-  return '$paddedDisplayName & ${_getMetricStringForTableRow(modelResultsForQuery)} \\\\';
+  return '$paddedDisplayName & ${_getMetricStringForTableRow(modelResultsForQuery)} \\\\ '
+      '% ${modelResultsForQuery.readableName} (${modelResultsForQuery.dataSource})';
 }
 
 bool _isModelInQueryList(

@@ -294,7 +294,7 @@ Future<void> _printLatexTableRowLinesForDataset(
         "Deep Gaze 2",
         "DeepGaze II",
       ],
-      "Deep Gaze~II \\cite{kümmerer2015deep}",
+      "Deep Gaze~II \\cite{kümmerer2016deepgaze}",
     ),
     _ModelNameQuery(
       [

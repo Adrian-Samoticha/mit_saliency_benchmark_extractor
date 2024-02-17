@@ -278,6 +278,10 @@ Future<void> _printLatexTableRowLinesForDataset(
   ];
 
   const selectedModels = [
+    _ModelNameQuery(
+      ["DeepGaze IIE"],
+      "Deep Gaze~IIE \\cite{linardos2021deepgaze}",
+    ),
     _ModelNameQuery(["EML-Net"], "EML-Net \\cite{jia2019emlnetan}"),
     _ModelNameQuery(["SAM-ResNet"], "SAM-ResNet \\cite{8400593}"),
     _ModelNameQuery(["SAM-VGG"], "SAM-VGG \\cite{8400593}"),

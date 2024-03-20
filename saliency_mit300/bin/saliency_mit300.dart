@@ -238,7 +238,6 @@ String _generatePerformancePlot(List<ModelResults> modelResults,
       '$backgroundElementsString'
       '$foregroundElementsString'
       '\\end{tikzpicture}\n'
-      '\\label{fig:mit300_nss_perf_plot}\n'
       '\\caption{Performance of various saliency map prediction models, measured by the NSS score each model achieved '
       'on the ${dataset.toUpperCase()} dataset. '
       'Performance measurements are taken from \\cite{mit-saliency-benchmark, mit-tuebingen-saliency-benchmark} '
@@ -248,6 +247,7 @@ String _generatePerformancePlot(List<ModelResults> modelResults,
       'are included. '
       'The code that was used to generate this figure is available at: \\url{'
       'https://github.com/Adrian-Samoticha/mit_saliency_benchmark_extractor}}\n'
+      '\\label{fig:mit300_nss_perf_plot}\n'
       '\\end{figure}\n';
 }
 

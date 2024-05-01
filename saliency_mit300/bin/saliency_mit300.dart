@@ -232,6 +232,9 @@ String _generatePerformancePlot(List<ModelResults> modelResults,
         '\\node at (-0.75,$y) {$performanceString};\n';
   }
 
+  final tableReference = 'tab:${dataset}_perf';
+  final label = 'fig:${dataset}_nss_perf_plot';
+
   return '\\begin{figure}\n'
       '\\centering\n'
       '\\begin{tikzpicture}\n'
@@ -242,12 +245,12 @@ String _generatePerformancePlot(List<ModelResults> modelResults,
       'on the ${dataset.toUpperCase()} dataset. '
       'Performance measurements are taken from \\cite{mit-saliency-benchmark, mit-tuebingen-saliency-benchmark} '
       'and are colored in \\textcolor{black}{black} or \\textcolor{SteelBlue}{blue}, respectively. '
-      'Models drawn with a dark color are present in Table~\\ref{tab:mit300_perf}. '
+      'Models drawn with a dark color are present in Table~\\ref{$tableReference}. '
       'Only models whose release date is present in \\cite{mit-saliency-benchmark, mit-tuebingen-saliency-benchmark} '
       'are included. '
       'The code that was used to generate this figure is available at: \\url{'
       'https://github.com/Adrian-Samoticha/mit_saliency_benchmark_extractor}}\n'
-      '\\label{fig:mit300_nss_perf_plot}\n'
+      '\\label{$label}\n'
       '\\end{figure}\n';
 }
 
